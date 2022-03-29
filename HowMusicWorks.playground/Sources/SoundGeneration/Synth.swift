@@ -8,7 +8,7 @@ final public class Synth {
 	public static var shared: Synth { return singleton }
 	public let audioEngine: AVAudioEngine
 	
-	public var waves = WaveContainer() {
+	public var waves = WaveContainer(waveA: false, waveB: false, waveC: false) {
 		didSet {
 			if oldValue.waveA.frequency != 0 {
 				deltaAHz = Float(waves.waveA.frequency - oldValue.waveA.frequency ) * 100
