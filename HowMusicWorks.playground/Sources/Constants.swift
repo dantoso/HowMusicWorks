@@ -29,7 +29,7 @@ public struct PythagorasTuning {
 	static public var fourth: Double { minorThird * 1.5 * 1.5 * 0.5 }
 	static public var minorFifth: Double { third * 1.5 * 1.5 * 0.5 }
 	static public var fifth: Double { homeNote * 1.5 }
-	static public var minorSixth: Double { fourth * 1.5 * 1.5 * 0.5 }
+	static public var minorSixth: Double { minorFifth * 1.5 * 1.5 * 0.5 }
 	static public var sixth: Double { fifth * 1.5 * 1.5 * 0.5 }
 	static public var minorSeventh: Double { minorSixth * 1.5 * 1.5 * 0.5 }
 	static public var seventh: Double { sixth * 1.5 * 1.5 * 0.5 }

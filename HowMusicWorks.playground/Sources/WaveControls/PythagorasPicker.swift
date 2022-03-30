@@ -10,6 +10,17 @@ public struct PythagorasNotePicker: View {
 	
 	public var body: some View {
 		VStack {
+			Button {
+				frequency = 0
+			} label: {
+				if frequency == 0 {
+					EmptyView()
+				}
+				else {
+					Text("Disable wave")
+				}
+			}
+
 			Picker("Major scale", selection: $frequency) {
 				Text("first").tag(PythagorasTuning.homeNote)
 				Text("second").tag(PythagorasTuning.second)
