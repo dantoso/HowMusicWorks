@@ -24,19 +24,10 @@ public struct InterfaceP3: View {
 					Synth.shared.waves = newValue
 				}
 			
-			Button {
-				sound.isPlaying.toggle()
-				if sound.isPlaying {
-					Synth.shared.waves = sound.waves
-					Synth.shared.volume = 0.2
-				}
-				else {
-					Synth.shared.volume = 0
-				}
-			} label: {
-				let waveSum = ChordWave(container: sound.waves)
-				WaveView(wave: waveSum)
-			}
+			let waveSum = ChordWave(container: sound.waves)
+			WaveView(wave: waveSum)
+			
+			PlayButton(sound: $sound)
 			
 		}
 		.frame(width: Sizes.width, height: Sizes.height, alignment: .center)

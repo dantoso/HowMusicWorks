@@ -2,9 +2,10 @@
  # What if we played two sounds at the same time?
  
  Very good question! Here I have another cool interface for you.\
- The white waves are all pure waves you can control with sliders.\
- They are added together to form the blue wave in the bottom.
- Like before, the blue wave is a button that represents the sound you can listen to (by tapping the wave).
+ Like before, here you'll be controlling wave frequencies with sliders, but now you control the frequency of 3 pure waves.\
+ These waves are added together to form a fourth wave in the bottom, which is not pure.\
+ Last but not least you can play a sound which corresponds to the wave you built in the bottom.\
+ Like before, all of it changes in real time!
  
  - Note:
  You can make a white wave not vibrate by making it vibrate in 0 Hz, this way you can observe how one or two waves alone make you feel, before you add the second or third.

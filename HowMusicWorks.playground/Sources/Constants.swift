@@ -16,7 +16,7 @@ public struct EqualTempered {
 	static public let gSharp: Float = 830.6093951598903
 }
 
-public struct PythagorasTuning {
+public struct PythagoreanTuning {
 	static public var first: Double = 4.4 {
 		didSet {
 			if first > 1000 {
@@ -28,18 +28,36 @@ public struct PythagorasTuning {
 			first /= 100
 		}
 	}
-	static public var minorSecond: Double { seventh * 1.5 * 1.5 * 0.25 }
-	static public var second: Double { first * 1.5 * 1.5 * 0.5 }
+	
+	static public var minorSecond: Double { fullStep(from: seventh) * 0.5 }
+	
+	static public var second: Double { fullStep(from: first) }
+	
 	static public var minorThird: Double { first * 1.2 }
+	
 	static public var third: Double { first * 1.25 }
-	static public var fourth: Double { minorThird * 1.5 * 1.5 * 0.5 }
-	static public var minorFifth: Double { third * 1.5 * 1.5 * 0.5 }
+	
+	static public var fourth: Double { fullStep(from: minorThird)}
+	
+	static public var minorFifth: Double { fullStep(from: third) }
+	
 	static public var fifth: Double { first * 1.5 }
-	static public var minorSixth: Double { minorFifth * 1.5 * 1.5 * 0.5 }
-	static public var sixth: Double { fifth * 1.5 * 1.5 * 0.5 }
-	static public var minorSeventh: Double { minorSixth * 1.5 * 1.5 * 0.5 }
-	static public var seventh: Double { sixth * 1.5 * 1.5 * 0.5 }
+	
+	static public var minorSixth: Double { fullStep(from: minorFifth)}
+	
+	static public var sixth: Double { fullStep(from: fifth) }
+	
+	static public var minorSeventh: Double { fullStep(from: minorSixth)}
+	
+	static public var seventh: Double { fullStep(from: sixth) }
+	
 	static public var eighth: Double { first * 2 }
+	
+	
+	static func fullStep(from original: Double) -> Double {
+		return original * 1.5 * 1.5 * 0.5
+	}
+
 }
 
 public struct Sizes {

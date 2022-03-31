@@ -7,10 +7,12 @@
  
 ## Let's play with frequency!
  
- When you execute this playground there is a slider where you can control the frequency of a sound wave, this wave goes from 0 Hz to 1200 Hz (0 vibrations per second to 1200 vibrations per second).
+ - Important:
+ **Lower the volume of your device before playing the sound, depending on how high the volume is, it might damage your ears or even your device's speakers.**
+ 
+ When you execute this playground there is a slider where you can control the frequency of a pure sound wave, this wave goes from 0 Hz to 1200 Hz (0 vibrations per second to 1200 vibrations per second).
 
- - Experiment:
- Tap the wave to start or stop the sound from playing and move the slider around to change the sound pitch/frequency.
+ Press the Play button to play a sound of the same frequency selected by the slider.
  
 Try to notice this:
  * Just letting the slider sit still doesn't make you feel anything.

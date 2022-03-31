@@ -17,9 +17,9 @@
 
 // Put any frequency you like, but once you change this frequency, be sure to select an option for the picker of every wave (the first might still be 440 Hz before you select something).
 
-// Because high frequencies are dangerous for the ears (and drawing them in the screen in an optimized way needs a little more work) I limited the frequency of the first to a maximum of 1000 and a minimum of 0.
+// Because high frequencies are dangerous for the ears (and drawing them in the screen in an optimized way needs a little more work) I limited the frequency of the first to a maximum of 1000 and a minimum of 0 Hz.
 
-PythagorasTuning.first = 1000
+PythagoreanTuning.first = 440
 
 /*:
 

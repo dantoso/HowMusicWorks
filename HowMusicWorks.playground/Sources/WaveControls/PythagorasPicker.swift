@@ -21,24 +21,24 @@ public struct PythagorasNotePicker: View {
 				}
 			}
 
-			Picker("Major scale", selection: $frequency) {
-				Text("first").tag(PythagorasTuning.first)
-				Text("minor second").tag(PythagorasTuning.minorSecond)
-				Text("second").tag(PythagorasTuning.second)
-				Text("minor third").tag(PythagorasTuning.minorThird)
-				Text("third").tag(PythagorasTuning.third)
-				Text("fourth").tag(PythagorasTuning.fourth)
-				Text("minor fifth").tag(PythagorasTuning.minorFifth)
+			Picker("", selection: $frequency) {
+				Text("first").tag(PythagoreanTuning.first)
+				Text("minor second").tag(PythagoreanTuning.minorSecond)
+				Text("second").tag(PythagoreanTuning.second)
+				Text("minor third").tag(PythagoreanTuning.minorThird)
+				Text("third").tag(PythagoreanTuning.third)
+				Text("fourth").tag(PythagoreanTuning.fourth)
+				Text("minor fifth").tag(PythagoreanTuning.minorFifth)
 			}
 			.pickerStyle(.segmented)
 			
-			Picker("Other intervals", selection: $frequency) {
-				Text("fifth").tag(PythagorasTuning.fifth)
-				Text("minor sixth").tag(PythagorasTuning.minorSixth)
-				Text("sixth").tag(PythagorasTuning.sixth)
-				Text("minor seventh").tag(PythagorasTuning.minorSeventh)
-				Text("seventh").tag(PythagorasTuning.seventh)
-				Text("octave").tag(PythagorasTuning.eighth)
+			Picker("", selection: $frequency) {
+				Text("fifth").tag(PythagoreanTuning.fifth)
+				Text("minor sixth").tag(PythagoreanTuning.minorSixth)
+				Text("sixth").tag(PythagoreanTuning.sixth)
+				Text("minor seventh").tag(PythagoreanTuning.minorSeventh)
+				Text("seventh").tag(PythagoreanTuning.seventh)
+				Text("octave").tag(PythagoreanTuning.eighth)
 			}
 			.pickerStyle(.segmented)
 
