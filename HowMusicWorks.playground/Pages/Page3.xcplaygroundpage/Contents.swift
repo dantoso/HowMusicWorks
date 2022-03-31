@@ -19,7 +19,7 @@
 
 // Because high frequencies are dangerous for the ears (and drawing them in the screen in an optimized way needs a little more work) I limited the frequency of the first to a maximum of 1000 and a minimum of 0 Hz.
 
-PythagoreanTuning.first = 440
+PythagoreanTuning.first = 528
 
 /*:
 

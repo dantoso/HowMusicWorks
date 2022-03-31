@@ -11,7 +11,7 @@ public struct InterfaceP1: View {
 	public var body: some View {
 		VStack() {
 			
-			Text("\(sound.waves.waveA.frequency * 100)")
+			Text("\(sound.waves.waveA.frequency * 100) Hz")
 			
 			WaveView(wave: sound.waves.waveA)
 				.onChange(of: sound.waves) { newValue in
