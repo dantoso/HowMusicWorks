@@ -1,6 +1,6 @@
 import SwiftUI
 
-public struct WaveHarmonicPickerView: View {
+public struct WavePythagorasPickerView: View {
 	@Binding public var wave: PureWave
 	
 	public init(wave: Binding<PureWave>) {

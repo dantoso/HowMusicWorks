@@ -53,7 +53,7 @@ public struct WaveView: View {
 			
 			path.move(to: origin)
 			for x in stride(from: 0, through: width, by: 1) {
-				let angle = x/width * 2*Double.pi
+				let angle = x/sec * 2*Double.pi
 				let y = wave.intensity(forAngle: angle) + height*0.5
 				
 				path.addLine(to: CGPoint(x: x, y: y))

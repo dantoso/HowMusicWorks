@@ -11,15 +11,15 @@ public struct InterfaceP3: View {
 	public var body: some View {
 		VStack() {
 			
-			WaveHarmonicPickerView(wave: $sound.waves.waveA)
+			WavePythagorasPickerView(wave: $sound.waves.waveA)
 				.onChange(of: sound.waves) { newValue in
 					Synth.shared.waves = newValue
 				}
-			WaveHarmonicPickerView(wave: $sound.waves.waveB)
+			WavePythagorasPickerView(wave: $sound.waves.waveB)
 				.onChange(of: sound.waves) { newValue in
 					Synth.shared.waves = newValue
 				}
-			WaveHarmonicPickerView(wave: $sound.waves.waveC)
+			WavePythagorasPickerView(wave: $sound.waves.waveC)
 				.onChange(of: sound.waves) { newValue in
 					Synth.shared.waves = newValue
 				}

@@ -17,23 +17,29 @@ public struct EqualTempered {
 }
 
 public struct PythagorasTuning {
-	static public var homeNote: Double = 4.4 {
+	static public var first: Double = 4.4 {
 		didSet {
-			homeNote /= 100
+			if first > 1000 {
+				first = 1000
+			}
+			else if first < 0 {
+				first = 0
+			}
+			first /= 100
 		}
 	}
 	static public var minorSecond: Double { seventh * 1.5 * 1.5 * 0.25 }
-	static public var second: Double { homeNote * 1.5 * 1.5 * 0.5 }
-	static public var minorThird: Double { homeNote * 1.2 }
-	static public var third: Double { homeNote * 1.25 }
+	static public var second: Double { first * 1.5 * 1.5 * 0.5 }
+	static public var minorThird: Double { first * 1.2 }
+	static public var third: Double { first * 1.25 }
 	static public var fourth: Double { minorThird * 1.5 * 1.5 * 0.5 }
 	static public var minorFifth: Double { third * 1.5 * 1.5 * 0.5 }
-	static public var fifth: Double { homeNote * 1.5 }
+	static public var fifth: Double { first * 1.5 }
 	static public var minorSixth: Double { minorFifth * 1.5 * 1.5 * 0.5 }
 	static public var sixth: Double { fifth * 1.5 * 1.5 * 0.5 }
 	static public var minorSeventh: Double { minorSixth * 1.5 * 1.5 * 0.5 }
 	static public var seventh: Double { sixth * 1.5 * 1.5 * 0.5 }
-	static public var eighth: Double { homeNote * 2 }
+	static public var eighth: Double { first * 2 }
 }
 
 public struct Sizes {
