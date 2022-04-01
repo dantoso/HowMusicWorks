@@ -146,10 +146,28 @@ final public class Synth {
 		
 		mainMixer.outputVolume = 0
 		
+		start()
+	}
+	
+	public func stop() {
+		audioEngine.stop()
+	}
+	
+	public func start() {
 		do {
 			try audioEngine.start()
 		}
 		catch { print("Could not start engine: \(error.localizedDescription)") }
+	}
+	
+	public func setWaves(_ waves: WaveContainer) {
+//		volume = 0
+		
+		self.waves = WaveContainer(waveA: false, waveB: false, waveC: false)
+		
+		self.waves = waves
+		
+//		volume = 0.2
 	}
 	
 }

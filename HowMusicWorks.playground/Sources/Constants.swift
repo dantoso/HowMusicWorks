@@ -29,18 +29,22 @@ public struct PythagoreanTuning {
 		}
 	}
 	
+	// a full step from the seventh but one octave below
 	static public var minorSecond: Double { fullStep(from: seventh) * 0.5 }
 	
 	static public var second: Double { fullStep(from: first) }
 	
+	// first * 6/5
 	static public var minorThird: Double { first * 1.2 }
 	
+	// first * 5/4
 	static public var third: Double { first * 1.25 }
 	
 	static public var fourth: Double { fullStep(from: minorThird)}
 	
 	static public var minorFifth: Double { fullStep(from: third) }
 	
+	// first * 3/2
 	static public var fifth: Double { first * 1.5 }
 	
 	static public var minorSixth: Double { fullStep(from: minorFifth)}
@@ -53,7 +57,8 @@ public struct PythagoreanTuning {
 	
 	static public var eighth: Double { first * 2 }
 	
-	
+	/// This function raises a frequency to a frequency one step above according pythagorean tuning.
+	/// The function takes the original note and returns a note two fifths above and one octave below, which equals a note one step higher than the original.
 	static func fullStep(from original: Double) -> Double {
 		return original * 1.5 * 1.5 * 0.5
 	}

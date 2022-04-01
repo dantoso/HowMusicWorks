@@ -1,7 +1,14 @@
-//: [Previous](@previous)
+/*:
+ 
+ 
+ 
+ ***
+ 
+ [Previous](@previous) | [Next](@next)
+ 
+ */
 
-import Foundation
+import PlaygroundSupport
 
-var greeting = "Hello, playground"
+PlaygroundPage.current.setLiveView(InterfaceP4())
 
-//: [Next](@next)

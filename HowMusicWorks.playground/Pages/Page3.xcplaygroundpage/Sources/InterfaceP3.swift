@@ -13,15 +13,18 @@ public struct InterfaceP3: View {
 			
 			WavePythagorasPickerView(wave: $sound.waves.waveA)
 				.onChange(of: sound.waves) { newValue in
-					Synth.shared.waves = newValue
+//					Synth.shared.waves = newValue
+					Synth.shared.setWaves(newValue)
 				}
 			WavePythagorasPickerView(wave: $sound.waves.waveB)
 				.onChange(of: sound.waves) { newValue in
-					Synth.shared.waves = newValue
+//					Synth.shared.waves = newValue
+					Synth.shared.setWaves(newValue)
 				}
 			WavePythagorasPickerView(wave: $sound.waves.waveC)
 				.onChange(of: sound.waves) { newValue in
-					Synth.shared.waves = newValue
+//					Synth.shared.waves = newValue
+					Synth.shared.setWaves(newValue)
 				}
 			
 			let waveSum = ChordWave(container: sound.waves)
