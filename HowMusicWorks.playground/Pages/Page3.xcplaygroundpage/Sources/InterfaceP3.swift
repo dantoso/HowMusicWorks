@@ -11,17 +11,17 @@ public struct InterfaceP3: View {
 	public var body: some View {
 		VStack() {
 			
-			WavePythagorasPickerView(wave: $sound.waves.waveA)
+			WCPythagorasPickerView(wave: $sound.waves.waveA)
 				.onChange(of: sound.waves) { newValue in
 //					Synth.shared.waves = newValue
 					Synth.shared.setWaves(newValue)
 				}
-			WavePythagorasPickerView(wave: $sound.waves.waveB)
+			WCPythagorasPickerView(wave: $sound.waves.waveB)
 				.onChange(of: sound.waves) { newValue in
 //					Synth.shared.waves = newValue
 					Synth.shared.setWaves(newValue)
 				}
-			WavePythagorasPickerView(wave: $sound.waves.waveC)
+			WCPythagorasPickerView(wave: $sound.waves.waveC)
 				.onChange(of: sound.waves) { newValue in
 //					Synth.shared.waves = newValue
 					Synth.shared.setWaves(newValue)

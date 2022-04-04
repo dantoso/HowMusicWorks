@@ -11,15 +11,15 @@ public struct InterfaceP4: View {
 	public var body: some View {
 		VStack() {
 			
-			WavePythagorasPickerView(wave: $sound.waves.waveA)
+			WCPythagoreanCommaPickerView(wave: $sound.waves.waveA)
 				.onChange(of: sound.waves) { newValue in
 					Synth.shared.waves = newValue
 				}
-			WavePythagorasPickerView(wave: $sound.waves.waveB)
+			WCPythagoreanCommaPickerView(wave: $sound.waves.waveB)
 				.onChange(of: sound.waves) { newValue in
 					Synth.shared.waves = newValue
 				}
-			WavePythagorasPickerView(wave: $sound.waves.waveC)
+			WCPythagoreanCommaPickerView(wave: $sound.waves.waveC)
 				.onChange(of: sound.waves) { newValue in
 					Synth.shared.waves = newValue
 				}

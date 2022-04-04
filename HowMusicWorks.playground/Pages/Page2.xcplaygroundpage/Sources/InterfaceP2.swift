@@ -11,9 +11,9 @@ public struct InterfaceP2: View {
 	public var body: some View {
 		VStack() {
 			
-			WaveSliderView(wave: $sound.waves.waveA)
-			WaveSliderView(wave: $sound.waves.waveB)
-			WaveSliderView(wave: $sound.waves.waveC)
+			WCSliderView(wave: $sound.waves.waveA)
+			WCSliderView(wave: $sound.waves.waveB)
+			WCSliderView(wave: $sound.waves.waveC)
 			
 			
 			let waveSum = ChordWave(container: sound.waves)

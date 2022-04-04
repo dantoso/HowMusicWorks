@@ -1,6 +1,8 @@
 import SwiftUI
 
-public struct WavePythagorasPickerView: View {
+//WC stands for wave controller
+
+public struct WCPythagorasPickerView: View {
 	@Binding public var wave: PureWave
 	
 	public init(wave: Binding<PureWave>) {
@@ -19,7 +21,7 @@ public struct WavePythagorasPickerView: View {
 	}
 }
 
-public struct WaveSliderView: View {
+public struct WCPythagoreanCommaPickerView: View {
 	@Binding public var wave: PureWave
 	
 	public init(wave: Binding<PureWave>) {
@@ -32,8 +34,7 @@ public struct WaveSliderView: View {
 				.padding(.top)
 			WaveView(wave: wave)
 				.padding(.bottom)
-			Slider(value: $wave.frequency, in: 0...10)
-				.frame(width: Sizes.width*0.9)
+			PythagoreanCommaNotePicker(frequency: $wave.frequency)
 			
 		}
 	}

@@ -15,7 +15,7 @@ public struct PureWave: Wave, Equatable {
 	public var maxAmplitude: Double
 	public var frequency: Double
 	
-	public init(frequency: Double = 4.4, maxAmplitude: Double = 25) {
+	public init(frequency: Double = PythagoreanTuning.first, maxAmplitude: Double = 25) {
 		self.frequency = frequency
 		self.maxAmplitude = maxAmplitude
 	}
