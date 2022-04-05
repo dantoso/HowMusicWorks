@@ -31,3 +31,8 @@ public struct InterfaceP1: View {
 	}
 }
 
+struct Preview1: PreviewProvider {
+	static var previews: some View {
+		InterfaceP1()
+	}
+}

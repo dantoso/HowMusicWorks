@@ -40,5 +40,10 @@ public struct InterfaceP3: View {
 }
 
 
+struct Preview3: PreviewProvider {
+	static var previews: some View {
+		InterfaceP3()
+	}
+}
 
 
