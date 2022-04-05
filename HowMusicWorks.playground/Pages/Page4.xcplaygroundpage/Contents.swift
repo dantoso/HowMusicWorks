@@ -17,9 +17,7 @@
  You'll see that now there are two A notes (A4 and A5), and what it means is that **A4 is exactly one octave below A5**, this is true for every other note, not just the A.
  
  ***
- 
- Now try this is the experiment:
- 
+  
  - Experiment:
  Try to play an A4 and an E4. And compare what it sounds like to a G4 and a D5 played together.
  
