@@ -16,7 +16,6 @@ public struct WCSliderView: View {
 			WaveView(wave: wave)
 				.padding(.bottom)
 			Slider(value: $wave.frequency, in: 0...10)
-				.frame(width: Sizes.width*0.9)
 			
 		}
 	}

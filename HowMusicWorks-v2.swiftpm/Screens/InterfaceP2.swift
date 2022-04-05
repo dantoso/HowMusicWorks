@@ -26,7 +26,7 @@ public struct InterfaceP2: View {
 			PlayButton(sound: $sound)
 			
 		}
-		.frame(width: Sizes.width, height: Sizes.height, alignment: .center)
+		.frame(alignment: .center)
 		.preferredColorScheme(.dark)
 	}
 }

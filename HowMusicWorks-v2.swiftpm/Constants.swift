@@ -65,8 +65,3 @@ public struct PythagoreanTuning {
 
 }
 
-public struct Sizes {
-	static public let width: CGFloat = 800
-	static public let height: CGFloat = 900
-}
-

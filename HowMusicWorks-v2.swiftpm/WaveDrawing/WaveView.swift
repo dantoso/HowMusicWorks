@@ -5,8 +5,7 @@ public struct WaveView: View {
 	
 	struct WavePath: Shape {
 		let wave: Wave
-		let width: CGFloat
-				
+		
 		func path(in rect: CGRect) -> Path {
 			var path = Path()
 			
@@ -31,7 +30,7 @@ public struct WaveView: View {
 	public let wave: Wave
 	
 	public var body: some View {
-		WavePath(wave: wave, width: Sizes.width)
+		WavePath(wave: wave)
 			.stroke(lineWidth: 2)
 			.frame(height: wave.maxAmplitude*2)
 	}

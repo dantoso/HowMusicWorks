@@ -21,13 +21,13 @@ public struct InterfaceP1: View {
 			PlayButton(sound: $sound)
 			
 			Slider(value: $sound.waves.waveA.frequency, in: 0...12)
-				.frame(width: Sizes.width*0.9)
 				.onChange(of: sound.waves) { newValue in
 					Synth.shared.setWaves(newValue)
 				}
 			
 		}
-		.frame(width: Sizes.width, height: 200, alignment: .center)
+		.frame(height: 200, alignment: .center)
 		.preferredColorScheme(.dark)
 	}
 }
+
