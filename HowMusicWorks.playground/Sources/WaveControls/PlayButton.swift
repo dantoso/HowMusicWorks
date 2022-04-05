@@ -13,11 +13,13 @@ public struct PlayButton: View {
 		Button(sound.isPlaying ? "Stop" : "Play") {
 			sound.isPlaying.toggle()
 			if sound.isPlaying {
-				Synth.shared.waves = sound.waves
+//				Synth.shared.start()
+				Synth.shared.setWaves(sound.waves)
 				Synth.shared.volume = 0.2
 			}
 			else {
 				Synth.shared.volume = 0
+//				Synth.shared.stop()
 			}
 		}
 		

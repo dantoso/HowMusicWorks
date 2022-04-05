@@ -62,6 +62,7 @@ final public class Synth {
 	var timeC: Float = 0
 	let sampleRate: Double
 	let deltaTime: Float
+	public var isPicker = false
 	
 	lazy var sourceNode = AVAudioSourceNode { (_, _, frameCount, audioBufferList) -> OSStatus in
 		
@@ -84,9 +85,12 @@ final public class Synth {
 			let bSample = self.sampleValForSine(oldFrequency: oldB, ramp: bRamp, period: bPeriod, time: self.timeB)
 			let cSample = self.sampleValForSine(oldFrequency: oldC, ramp: cRamp, period: cPeriod, time: self.timeC)
 			
-			self.timeA = fmod(self.timeA, aPeriod)
-			self.timeB = fmod(self.timeB, bPeriod)
-			self.timeC = fmod(self.timeC, cPeriod)
+			// so they are never out of phase when using the picker:
+			if !self.isPicker {
+				self.timeA = fmod(self.timeA, aPeriod)
+				self.timeB = fmod(self.timeB, bPeriod)
+				self.timeC = fmod(self.timeC, cPeriod)
+			}
 			
 			let sampleTotalVal = aSample + bSample + cSample
 			self.timeA += self.deltaTime
@@ -104,13 +108,34 @@ final public class Synth {
 	
 	func sampleValForSine(oldFrequency: Float, ramp: Float, period: Float, time: Float) -> Float {
 		
-		let percent = fmod(time, period)
+		let currentTime = fmod(time, period)
+		let percent = currentTime/period
 		let frequency = oldFrequency + ramp * percent
 		
-		let angle = 2*Float.pi * time
+		let angle = 2*Float.pi * currentTime
 		let sine = sin(angle * frequency)
 		
 		return sine
+	}
+	
+	func sampleValForTriangle(oldFrequency: Float, ramp: Float, period: Float, time: Float) -> Float {
+		let currentTime = fmod(time, period)
+		let percent = currentTime/period
+		let frequency = oldFrequency + ramp * percent
+		
+		let value = currentTime * frequency
+		
+		var result: Float = 0.0
+		if value < 0.25 {
+			result = value * 4
+		} else if value < 0.75 {
+			result = 2.0 - (value * 4.0)
+		} else {
+			result = value * 4 - 4.0
+		}
+		
+		return result
+		
 	}
 	
 //	func sampleValForwaves() -> Float {
@@ -151,6 +176,12 @@ final public class Synth {
 	
 	public func stop() {
 		audioEngine.stop()
+	}
+	
+	public func reset() {
+		timeA = 0
+		timeB = 0
+		timeC = 0
 	}
 	
 	public func start() {

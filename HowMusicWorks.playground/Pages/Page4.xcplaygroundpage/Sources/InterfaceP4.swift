@@ -6,6 +6,7 @@ public struct InterfaceP4: View {
 	
 	public init() {
 		self.sound = Sound(waveA: true, waveB: true, waveC: true)
+		Synth.shared.isPicker = true
 	}
 	
 	public var body: some View {
@@ -13,15 +14,18 @@ public struct InterfaceP4: View {
 			
 			WCPythagoreanCommaPickerView(wave: $sound.waves.waveA)
 				.onChange(of: sound.waves) { newValue in
-					Synth.shared.waves = newValue
+//					Synth.shared.waves = newValue
+					Synth.shared.setWaves(newValue)
 				}
 			WCPythagoreanCommaPickerView(wave: $sound.waves.waveB)
 				.onChange(of: sound.waves) { newValue in
-					Synth.shared.waves = newValue
+//					Synth.shared.waves = newValue
+					Synth.shared.setWaves(newValue)
 				}
 			WCPythagoreanCommaPickerView(wave: $sound.waves.waveC)
 				.onChange(of: sound.waves) { newValue in
-					Synth.shared.waves = newValue
+//					Synth.shared.waves = newValue
+					Synth.shared.setWaves(newValue)
 				}
 			
 			let waveSum = ChordWave(container: sound.waves)

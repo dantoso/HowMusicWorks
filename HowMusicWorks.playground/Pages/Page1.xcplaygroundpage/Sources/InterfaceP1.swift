@@ -15,7 +15,7 @@ public struct InterfaceP1: View {
 			
 			WaveView(wave: sound.waves.waveA)
 				.onChange(of: sound.waves) { newValue in
-					Synth.shared.waves = newValue
+					Synth.shared.setWaves(newValue)
 				}
 			
 			PlayButton(sound: $sound)
@@ -23,7 +23,7 @@ public struct InterfaceP1: View {
 			Slider(value: $sound.waves.waveA.frequency, in: 0...12)
 				.frame(width: Sizes.width*0.9)
 				.onChange(of: sound.waves) { newValue in
-					Synth.shared.waves = newValue
+					Synth.shared.setWaves(newValue)
 				}
 			
 		}

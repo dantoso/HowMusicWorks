@@ -6,6 +6,7 @@ public struct InterfaceP3: View {
 	
 	public init() {
 		self.sound = Sound(waveA: true, waveB: true, waveC: true)
+		Synth.shared.isPicker = true
 	}
 	
 	public var body: some View {

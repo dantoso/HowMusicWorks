@@ -8,7 +8,7 @@
  
  ***
  
- After he found that out, he started testing other ratios and so he came up with 3 to 2 (a fifth) 5 to 4 (a third) and so on. He kept testing these notes until he came up with 12 different notes. All derived from multiplying an original frequency by these ratios. This original frequency is called the first.
+ After he found that out, he started testing other ratios and so he came up with 3 to 2 (a fifth) 5 to 4 (a third) and so on. He kept testing these notes until he came up with 12 different notes. All derived from multiplying an **original frequency** by these **ratios**. This original frequency is called the first.
  
  ***
  ## Try to play some tunes or some cool chords!
@@ -22,7 +22,7 @@
  The original note or first for now is 440 Hz, but you can change the original frequnency for any you want right here:
  */
 // Type any value from 0 Hz to 1000 Hz.
-PythagoreanTuning.first = 550
+PythagoreanTuning.first = 440
 /*:
 
  ***
