@@ -22,7 +22,7 @@ public struct PlayButton: View {
 //				Synth.shared.stop()
 			}
 		}
+		.buttonStyle(.bordered)
 		
 	}
 }
-

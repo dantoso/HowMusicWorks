@@ -2,11 +2,7 @@ import SwiftUI
 
 public struct InterfaceP1: View {
 
-	@State var sound: Sound
-	
-	public init() {
-		self.sound = Sound(waveA: true, waveB: false, waveC: false)
-	}
+	@Binding var sound: Sound
 	
 	public var body: some View {
 		VStack() {
@@ -27,12 +23,12 @@ public struct InterfaceP1: View {
 			
 		}
 		.frame(height: 200, alignment: .center)
-		.preferredColorScheme(.dark)
 	}
 }
 
-struct Preview1: PreviewProvider {
-	static var previews: some View {
-		InterfaceP1()
-	}
-}
+//struct Preview1: PreviewProvider {
+//	static var previews: some View {
+//		InterfaceP1()
+//			.preferredColorScheme(.dark)
+//	}
+//}

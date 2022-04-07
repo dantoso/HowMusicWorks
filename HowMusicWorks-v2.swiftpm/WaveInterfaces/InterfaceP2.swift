@@ -2,12 +2,7 @@ import SwiftUI
 
 public struct InterfaceP2: View {
 
-	@State var sound: Sound
-	
-	public init() {
-		self.sound = Sound(waveA: true, waveB: true, waveC: true)
-		Synth.shared.isPicker = false
-	}
+	@Binding var sound: Sound
 	
 	public var body: some View {
 		VStack() {
@@ -31,9 +26,9 @@ public struct InterfaceP2: View {
 	}
 }
 
-struct Preview2: PreviewProvider {
-	static var previews: some View {
-		InterfaceP2()
-	}
-}
-
+//struct Preview2: PreviewProvider {
+//	static var previews: some View {
+//		InterfaceP2()
+//	}
+//}
+//
