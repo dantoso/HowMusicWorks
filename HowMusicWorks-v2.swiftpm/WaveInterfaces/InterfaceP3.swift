@@ -2,29 +2,24 @@ import SwiftUI
 
 public struct InterfaceP3: View {
 
-	@State var sound: Sound
-	
-	public init() {
-		self.sound = Sound(waveA: true, waveB: true, waveC: true)
-		Synth.shared.isPicker = true
-	}
+	@Binding var sound: Sound
 	
 	public var body: some View {
 		VStack() {
 			
 			WCPythagorasPickerView(wave: $sound.waves.waveA)
 				.onChange(of: sound.waves) { newValue in
-//					Synth.shared.waves = newValue
+					Synth.shared.isPicker = true
 					Synth.shared.setWaves(newValue)
 				}
 			WCPythagorasPickerView(wave: $sound.waves.waveB)
 				.onChange(of: sound.waves) { newValue in
-//					Synth.shared.waves = newValue
+					Synth.shared.isPicker = true
 					Synth.shared.setWaves(newValue)
 				}
 			WCPythagorasPickerView(wave: $sound.waves.waveC)
 				.onChange(of: sound.waves) { newValue in
-//					Synth.shared.waves = newValue
+					Synth.shared.isPicker = true
 					Synth.shared.setWaves(newValue)
 				}
 			
@@ -39,11 +34,11 @@ public struct InterfaceP3: View {
 	}
 }
 
-
-struct Preview3: PreviewProvider {
-	static var previews: some View {
-		InterfaceP3()
-	}
-}
+//
+//struct Preview3: PreviewProvider {
+//	static var previews: some View {
+//		InterfaceP3()
+//	}
+//}
 
 

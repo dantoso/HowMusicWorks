@@ -11,15 +11,22 @@ final class ViewModel: ObservableObject {
 	@Published var sound = Sound(waveA: true, waveB: false, waveC: false)
 	@Published var presentedScreen: Screens? = nil {
 		didSet {
-			sound.isPlaying = false
-			Synth.shared.volume = 0
-			
-			switch presentedScreen {
-			case .first, nil:
-				sound.waves = WaveContainer(waveA: true, waveB: false, waveC: false)
-			default:
-				sound.waves = WaveContainer()
-			}
+			transition(from: oldValue)
+		}
+	}
+	
+	func transition(from oldView: Screens?) {
+		print("transitioning")
+		sound.isPlaying = false
+		Synth.shared.volume = 0
+		
+		switch presentedScreen {
+		case .first, nil:
+			sound.waves = WaveContainer(waveA: true, waveB: false, waveC: false)
+		case .fourth:
+			sound.waves = WaveContainer(waveA: true, waveB: true, waveC: false)
+		default:
+			sound.waves = WaveContainer()
 		}
 	}
 }

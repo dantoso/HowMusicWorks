@@ -6,9 +6,9 @@ struct Screen2: View {
 	
 	var body: some View {
 		NavigationView {
-			Form {
+			ScrollView(.vertical) {
 				
-				InterfaceP2(sound: $viewModel.sound)
+				InterfaceP4(sound: $viewModel.sound)
 				
 			}
 			.navigationTitle(Text("Playing 2 sounds at the same time"))

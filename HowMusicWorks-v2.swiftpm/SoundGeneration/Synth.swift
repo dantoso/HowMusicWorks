@@ -178,7 +178,11 @@ final public class Synth {
 		audioEngine.stop()
 	}
 	
-	public func reset() {
+	func resetWaves() {
+		waves = WaveContainer(waveA: false, waveB: false, waveC: false)
+	}
+	
+	public func resetTime() {
 		timeA = 0
 		timeB = 0
 		timeC = 0
@@ -194,8 +198,9 @@ final public class Synth {
 	public func setWaves(_ waves: WaveContainer) {
 //		volume = 0
 		
-		self.waves = WaveContainer(waveA: false, waveB: false, waveC: false)
-		
+		if isPicker {
+			resetTime()
+		}
 		self.waves = waves
 		
 //		volume = 0.2

@@ -9,7 +9,7 @@ public struct WaveView: View {
 		func path(in rect: CGRect) -> Path {
 			var path = Path()
 			
-			let relativeTotal: Double = 200
+			let waveLength: Double = 200
 			let height = Double(rect.height)
 			let width = Double(rect.width)
 
@@ -17,7 +17,7 @@ public struct WaveView: View {
 			
 			path.move(to: origin)
 			for x in stride(from: 0, through: width, by: 1) {
-				let angle = x/relativeTotal * 2*Double.pi
+				let angle = x/waveLength * 2*Double.pi
 				let y = wave.intensity(forAngle: angle) + height*0.5
 				
 				path.addLine(to: CGPoint(x: x, y: y))

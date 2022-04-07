@@ -4,10 +4,6 @@ public struct PythagoreanCommaNotePicker: View {
 	
 	@Binding var frequency: Double
 	
-	public init(frequency: Binding<Double>) {
-		self._frequency = frequency
-	}
-	
 	public var body: some View {
 		VStack {
 			Button {
@@ -20,26 +16,44 @@ public struct PythagoreanCommaNotePicker: View {
 					Text("Disable wave")
 				}
 			}
-
+			
 			Picker("", selection: $frequency) {
-				Text("A4").tag(PythagoreanTuning.first)
-				Text("B4").tag(PythagoreanTuning.second)
-				Text("C4").tag(PythagoreanTuning.third)
-				Text("D4").tag(PythagoreanTuning.fourth)
-				Text("E4").tag(PythagoreanTuning.fifth)
-				Text("F4").tag(PythagoreanTuning.sixth)
-				Text("G4").tag(PythagoreanTuning.seventh)
+				Text("A3").tag(PythagoreanTuning.first*0.5)
+				Text("A#3").tag(PythagoreanTuning.minorSecond*0.5)
+				Text("B3").tag(PythagoreanTuning.second*0.5)
+				Text("C3").tag(PythagoreanTuning.minorThird*0.5)
+				Text("C#3").tag(PythagoreanTuning.third*0.5)
+				Text("D3").tag(PythagoreanTuning.fourth*0.5)
 			}
 			.pickerStyle(.segmented)
 			
 			Picker("", selection: $frequency) {
-				Text("A5").tag(PythagoreanTuning.eighth)
-				Text("B5").tag(PythagoreanTuning.second*2)
-				Text("C5").tag(PythagoreanTuning.third*2)
-				Text("D5").tag(PythagoreanTuning.fourth*2)
-				Text("E5").tag(PythagoreanTuning.fifth*2)
-				Text("F5").tag(PythagoreanTuning.sixth*2)
-				Text("G5").tag(PythagoreanTuning.seventh*2)
+				Text("D#3").tag(PythagoreanTuning.minorFifth*0.5)
+				Text("E3").tag(PythagoreanTuning.fifth*0.5)
+				Text("F3").tag(PythagoreanTuning.minorSixth*0.5)
+				Text("F#3").tag(PythagoreanTuning.sixth*0.5)
+				Text("G3").tag(PythagoreanTuning.minorSeventh*0.5)
+				Text("G#3").tag(PythagoreanTuning.seventh*0.5)
+			}
+			.pickerStyle(.segmented)
+			
+			Picker("", selection: $frequency) {
+				Text("A4").tag(PythagoreanTuning.first)
+				Text("A#4").tag(PythagoreanTuning.minorSecond)
+				Text("B4").tag(PythagoreanTuning.second)
+				Text("C4").tag(PythagoreanTuning.minorThird)
+				Text("C#4").tag(PythagoreanTuning.third)
+				Text("D4").tag(PythagoreanTuning.fourth)
+			}
+			.pickerStyle(.segmented)
+			
+			Picker("", selection: $frequency) {
+				Text("D#4").tag(PythagoreanTuning.minorFifth)
+				Text("E4").tag(PythagoreanTuning.fifth)
+				Text("F4").tag(PythagoreanTuning.minorSixth)
+				Text("F#4").tag(PythagoreanTuning.sixth)
+				Text("G4").tag(PythagoreanTuning.minorSeventh)
+				Text("G#4").tag(PythagoreanTuning.seventh)
 			}
 			.pickerStyle(.segmented)
 

@@ -3,11 +3,7 @@ import SwiftUI
 //WC stands for wave controller
 
 public struct WCPythagorasPickerView: View {
-	@Binding public var wave: PureWave
-	
-	public init(wave: Binding<PureWave>) {
-		self._wave = wave
-	}
+	@Binding var wave: PureWave
 	
 	public var body: some View {
 		VStack(alignment: .leading) {
@@ -22,11 +18,7 @@ public struct WCPythagorasPickerView: View {
 }
 
 public struct WCPythagoreanCommaPickerView: View {
-	@Binding public var wave: PureWave
-	
-	public init(wave: Binding<PureWave>) {
-		self._wave = wave
-	}
+	@Binding var wave: PureWave
 	
 	public var body: some View {
 		VStack(alignment: .leading) {

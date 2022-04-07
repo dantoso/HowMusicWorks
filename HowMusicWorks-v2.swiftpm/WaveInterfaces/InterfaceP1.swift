@@ -11,6 +11,7 @@ public struct InterfaceP1: View {
 			
 			WaveView(wave: sound.waves.waveA)
 				.onChange(of: sound.waves) { newValue in
+					Synth.shared.isPicker = false
 					Synth.shared.setWaves(newValue)
 				}
 			
@@ -18,6 +19,7 @@ public struct InterfaceP1: View {
 			
 			Slider(value: $sound.waves.waveA.frequency, in: 0...12)
 				.onChange(of: sound.waves) { newValue in
+					Synth.shared.isPicker = false
 					Synth.shared.setWaves(newValue)
 				}
 			

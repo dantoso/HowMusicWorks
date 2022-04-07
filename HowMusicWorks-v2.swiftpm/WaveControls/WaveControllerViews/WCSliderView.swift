@@ -5,10 +5,6 @@ import SwiftUI
 public struct WCSliderView: View {
 	@Binding public var wave: PureWave
 	
-	public init(wave: Binding<PureWave>) {
-		self._wave = wave
-	}
-	
 	public var body: some View {
 		VStack(alignment: .leading) {
 			Text("\(wave.frequency*100) Hz")

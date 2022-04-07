@@ -4,10 +4,6 @@ public struct PythagorasNotePicker: View {
 	
 	@Binding var frequency: Double
 	
-	public init(frequency: Binding<Double>) {
-		self._frequency = frequency
-	}
-	
 	public var body: some View {
 		VStack {
 			Button {
