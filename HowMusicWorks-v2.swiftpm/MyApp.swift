@@ -4,7 +4,7 @@ import SwiftUI
 struct MyApp: App {
     var body: some Scene {
         WindowGroup {
-            Screen1()
+            IntroScreen()
 				.preferredColorScheme(.dark)
         }
     }

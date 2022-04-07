@@ -25,6 +25,7 @@ public struct InterfaceP3: View {
 			
 			let waveSum = ChordWave(container: sound.waves)
 			WaveView(wave: waveSum)
+				.padding(.top)
 			
 			PlayButton(sound: $sound)
 			

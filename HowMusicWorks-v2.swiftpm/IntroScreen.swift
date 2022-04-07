@@ -1,12 +1,12 @@
 import SwiftUI
 
-struct Screen1: View {
+struct IntroScreen: View {
 	
 	@ObservedObject var viewModel = ViewModel()
 	
     var body: some View {
 		NavigationView {
-			Form {
+			List {
 				
 				Section {
 					Text("Welcome to my app, here I'll be trying to explain how music notes work. In other words, how sound waves make us feel things!")
@@ -38,7 +38,7 @@ struct Screen1: View {
 					.multilineTextAlignment(.center)
 				
 				Section {
-					NavigationLink(destination: Screen2(),
+					NavigationLink(destination: Playing2Screen(),
 								   tag: .second,
 								   selection: $viewModel.presentedScreen) {
 						Spacer()
