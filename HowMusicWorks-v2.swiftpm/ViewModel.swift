@@ -9,14 +9,22 @@ enum Screens: String, Identifiable {
 
 final class ViewModel: ObservableObject {
 	@Published var sound = Sound(waveA: true, waveB: false, waveC: false)
-	@Published var presentedScreen: Screens? = nil {
+	@Published var presentedScreen: Screens? = .first {
 		didSet {
 			transition(from: oldValue)
 		}
 	}
 	
+	init() {
+		print("viewmodel apareceu")
+	}
+	
+	deinit {
+		print("viewmodel morreu")
+	}
+	
 	func transition(from oldView: Screens?) {
-		print("transitioning")
+		print("transitioning to \(presentedScreen?.rawValue)")
 		sound.isPlaying = false
 		Synth.shared.volume = 0
 		

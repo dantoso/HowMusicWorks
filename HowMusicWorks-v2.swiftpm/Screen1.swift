@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct IntroScreen: View {
+struct Screen1: View {
 	
 	@ObservedObject var viewModel = ViewModel()
 	
@@ -38,13 +38,23 @@ struct IntroScreen: View {
 					.multilineTextAlignment(.center)
 				
 				Section {
-					NavigationLink(destination: Playing2Screen(),
-								   tag: .second,
-								   selection: $viewModel.presentedScreen) {
+					HStack {
 						Spacer()
-						Text("Next")
-							.font(.headline)
-							.foregroundColor(.blue)
+
+						Button {
+							viewModel.presentedScreen = .second
+						} label: {
+							Text("Next")
+								.font(.headline)
+								.foregroundColor(.blue)
+						}
+
+						NavigationLink(destination: Screen2(),
+									   tag: .second,
+									   selection: $viewModel.presentedScreen) {
+							EmptyView()
+						}
+						
 					}
 
 				}
