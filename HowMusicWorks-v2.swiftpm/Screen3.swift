@@ -42,11 +42,11 @@ struct Screen3: View {
 					}
 
 					
-					NavigationLink(destination: Text("This is the next screen"),
-								   tag: .fourth,
-								   selection: $viewModel.presentedScreen) {
-						EmptyView()
-					}
+//					NavigationLink(destination: Text("This is the next screen"),
+//								   tag: .fourth,
+//								   selection: $viewModel.presentedScreen) {
+//						EmptyView()
+//					}
 					
 				}
 
