@@ -40,21 +40,17 @@ struct Screen2: View {
 					Spacer()
 
 					Button {
-						viewModel.presentedScreen = .first
+						viewModel.presentedScreens.screen3 = true
 					} label: {
 						Text("Next")
 							.font(.headline)
 							.foregroundColor(.blue)
 					}
-					
-					NavigationLink(destination: Screen3(),
-								   tag: .third,
-								   selection: $viewModel.presentedScreen) {
+					NavigationLink(destination: Screen3(), isActive: $viewModel.presentedScreens.screen3) {
 						EmptyView()
 					}
-					
-				}
 
+				}
 
 			}
 		}

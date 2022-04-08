@@ -6,15 +6,20 @@ enum Screens: String, Identifiable {
 	case first, second, third, fourth, fifth
 }
 
+struct ScreenContainer {
+	var screen2: Bool = false
+	var screen3: Bool = false
+	var screen4: Bool = false
+}
 
 final class ViewModel: ObservableObject {
 	@Published var sound = Sound(waveA: true, waveB: false, waveC: false)
-	@Published var presentedScreen: Screens? = .first {
+	@Published var presentedScreens = ScreenContainer() {
 		didSet {
-			transition(from: oldValue)
+			transitioning()
 		}
 	}
-	
+
 	init() {
 		print("viewmodel apareceu")
 	}
@@ -23,17 +28,15 @@ final class ViewModel: ObservableObject {
 		print("viewmodel morreu")
 	}
 	
-	func transition(from oldView: Screens?) {
-		print("transitioning to \(presentedScreen?.rawValue)")
+	private func transitioning() {
 		sound.isPlaying = false
-		Synth.shared.volume = 0
-		
-		switch presentedScreen {
-		case .first, nil:
+		if !presentedScreens.screen2 {
 			sound.waves = WaveContainer(waveA: true, waveB: false, waveC: false)
-		case .fourth:
+		}
+		else if presentedScreens.screen4 {
 			sound.waves = WaveContainer(waveA: true, waveB: true, waveC: false)
-		default:
+		}
+		else {
 			sound.waves = WaveContainer()
 		}
 	}
