@@ -6,15 +6,13 @@ struct Screen3: View {
 	
 	var body: some View {
 		ScrollView(.vertical, showsIndicators: false) {
-			Text("A long long time ago, Pythagoras (a very smart greek dude) noticed that the pitch of a sound was determined by the size of the thing vibrating to produce such sound.")
+			Text("A long long time ago, Pythagoras (a very smart greek dude) noticed that when two things, one twice the size of the other, vibrate together, they make a very pleasing sound.")
 				.padding()
 				.multilineTextAlignment(.center)
-			Text("Along with that, he also noticed that when two things, one twice the size of the other, vibrate together, they make a very pleasing sound. In other words when 2 frequencies are played and one of them is double the other, they produce a a pleasing feeling.")
+			Text("In other words when 2 frequencies are played and one of them is double the other, they produce a a pleasing feeling. When a note's frequency is double the frequency of another, it is said (in western music theory) that this note is an octave above the original.")
 				.padding()
 				.multilineTextAlignment(.center)
-			Text("When a note's frequency is double the frequency of another, it is said (in western music theory) that this note is an octave above the original.")
-				.padding()
-				.multilineTextAlignment(.center)
+			
 			Text("After he found that out, he started testing other ratios and so he came up with 3 to 2 (a fifth) 5 to 4 (a third) and so on. He kept testing these notes until he came up with 12 different notes. All derived from multiplying an original frequency by these ratios. This original frequency is called the first.")
 				.padding()
 				.multilineTextAlignment(.center)
@@ -24,6 +22,10 @@ struct Screen3: View {
 			
 		
 			InterfaceP3(sound: $viewModel.sound)
+			
+			Text("So, I just showed you how you fit 12 notes in an octave following the pythagorean tuning, now to go lower or higher than that octave you just need to divide or multiply by 2, respectively, every other note in that octave so you can play in wider ranges!")
+				.padding()
+				.multilineTextAlignment(.center)
 			
 			Text("So that's it right? Now we have a perfect system that can generate notes that sound perfect together and we can compose music however we want!")
 				.padding()

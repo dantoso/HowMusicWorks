@@ -10,6 +10,7 @@ struct ScreenContainer {
 	var screen2: Bool = false
 	var screen3: Bool = false
 	var screen4: Bool = false
+	var screen5: Bool = false
 }
 
 final class ViewModel: ObservableObject {
