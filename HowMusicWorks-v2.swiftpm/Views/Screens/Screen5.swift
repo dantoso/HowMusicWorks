@@ -10,6 +10,6 @@ struct Screen5: View {
 			Text("screen 5")
 
 		}
-		.navigationTitle(Text("Pythagorean comma"))
+		.navigationTitle(Text("Equal temperament"))
 	}
 }
