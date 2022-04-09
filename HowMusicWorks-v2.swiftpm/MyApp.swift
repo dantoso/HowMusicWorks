@@ -3,7 +3,7 @@ import SwiftUI
 @main
 struct MyApp: App {
 	
-	@ObservedObject var viewModel = ViewModel()
+	@StateObject var viewModel = ViewModel()
 	
     var body: some Scene {
         WindowGroup {
