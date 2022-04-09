@@ -24,8 +24,17 @@ struct Screen3: View {
 			
 		
 			InterfaceP3(sound: $viewModel.sound)
+			
+			Text("So that's it right? Now we have a perfect system that can generate notes that sound perfect together and we can compose music however we want!")
+				.padding()
+				.multilineTextAlignment(.center)
+			Text("Or is it??")
+				.font(.system(size: 17, weight: .bold))
+				.padding()
+				.multilineTextAlignment(.center)
+			
 						
-			NextButton(destination: Screen2(), screenIsActive: $viewModel.presentedScreens.screen4)
+			NextButton(destination: Screen4(), screenIsActive: $viewModel.presentedScreens.screen4)
 
 
 		}
