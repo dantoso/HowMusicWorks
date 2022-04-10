@@ -2,18 +2,18 @@ import SwiftUI
 
 
 public struct EqualTempered {
-	static public let a: Float = 440.0
-	static public let aSharp: Float = 466.1637615180899
-	static public let b: Float = 493.8833012561241
-	static public let c: Float = 523.2511306011972
-	static public let cSharp: Float = 554.3652619537442
-	static public let d: Float = 587.3295358348151
-	static public let dSharp: Float = 622.2539674441618
-	static public let e: Float = 659.2551138257398
-	static public let f: Float = 698.4564628660078
-	static public let fSharp: Float = 739.9888454232688
-	static public let g: Float = 783.9908719634985
-	static public let gSharp: Float = 830.6093951598903
+	static public let a: Double = 4.400
+	static public let aSharp: Double = 4.661637615180899
+	static public let b: Double = 4.938833012561241
+	static public let c: Double = 5.232511306011972
+	static public let cSharp: Double = 5.543652619537442
+	static public let d: Double = 5.873295358348151
+	static public let dSharp: Double = 6.222539674441618
+	static public let e: Double = 6.592551138257398
+	static public let f: Double = 6.984564628660078
+	static public let fSharp: Double = 7.399888454232688
+	static public let g: Double = 7.839908719634985
+	static public let gSharp: Double = 8.306093951598903
 }
 
 public struct PythagoreanTuning {

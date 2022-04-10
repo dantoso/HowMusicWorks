@@ -30,8 +30,10 @@ final class ViewModel: ObservableObject {
 	}
 	
 	private func transitioning() {
-		sound.isPlaying = false
+		Synth.shared.volume = 0
 		Synth.shared.resetTime()
+		
+		print("transition")
 		
 		if !presentedScreens.screen2 {
 			sound.waves = WaveContainer(waveA: true, waveB: false, waveC: false)
