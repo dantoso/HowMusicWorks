@@ -30,6 +30,7 @@ final class ViewModel: ObservableObject {
 	}
 	
 	private func transitioning() {
+		sound.isPlaying = false
 		Synth.shared.volume = 0
 		Synth.shared.resetTime()
 		
