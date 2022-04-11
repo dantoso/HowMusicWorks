@@ -1,11 +1,5 @@
 import Foundation
 
-enum Screens: String, Identifiable {
-	var id: String {self.rawValue}
-	
-	case first, second, third, fourth, fifth
-}
-
 struct ScreenContainer {
 	var screen2: Bool = false
 	var screen3: Bool = false
