@@ -7,11 +7,7 @@ struct Screen1: View {
     var body: some View {
 		ScrollView(.vertical, showsIndicators: false) {
 		
-			Text("Welcome to my app, here I'll be trying to explain how music notes work. In other words, how sound waves make us feel things!")
-				.padding()
-				.multilineTextAlignment(.center)
-			
-			Text("In this screen you will be able to toy with a sound wave.")
+			Text("Welcome to my app, here I'll be trying to explain how music notes work. In other words, how we manipulate sound waves to make us feel things!")
 				.padding()
 				.multilineTextAlignment(.center)
 			
