@@ -3,36 +3,49 @@ import SwiftUI
 struct Screen1: View {
 	
 	@EnvironmentObject var viewModel: ViewModel
+	@State var showInfo = false
 	
-    var body: some View {
-		ScrollView(.vertical, showsIndicators: false) {
-		
-			Text("Welcome to my app, here I'll be trying to explain how music notes work. In other words, how we manipulate sound waves to make us feel things!")
-				.padding()
-				.multilineTextAlignment(.center)
+	var body: some View {
+		VStack {
+			HStack {
+				Button {
+					showInfo = true
+				} label: {
+					Image(systemName: "info.circle")
+				}
+				Spacer()
+			}
 			
-			Text("First lower the volume of your device, if when you press play the volume is too low, gradually raise it to a volume you find comfortable.")
-				.font(Font.headline)
-				.padding()
-				.multilineTextAlignment(.center)
-		
-		Text("Once you're ready press play and start moving the slider around!")
-			.padding()
-			.multilineTextAlignment(.center)
-		
-		InterfaceP1(sound: $viewModel.sound)
-		
-		Text("Try to notice that just letting the slider sit still probably doesn't make you feel anything, but if you move it around it probably does!")
-			.padding()
-			.multilineTextAlignment(.center)
-		
-		Text("That's because a certain sound only makes us feel if this sound is inserted in a context.\nIn other words, what a certain sound sounds like in relation to other sounds is what makes us feel things! (yes it is kind of confusing).")
-			.padding()
-			.multilineTextAlignment(.center)
-		
-			NextButton(destination: Screen2(), screenIsActive: $viewModel.presentedScreens.screen2)
+			InterfaceP2(sound: $viewModel.sound)
 			
 		}
-		.navigationTitle(Text("Sound and Feelings"))
-    }
+		.popover(isPresented: $showInfo) {
+			InfoView()
+		}
+		
+	}
+	
 }
+
+struct InfoView: View {
+	var body: some View {
+		ScrollView(.vertical) {
+			Text("Sounds and feelings")
+				.font(.headline)
+				.padding()
+			
+			Text("rhhdshgd")
+				.padding()
+
+
+		}
+	}
+}
+
+//struct MyPreviewProvider_Previews: PreviewProvider {
+//	static var previews: some View {
+//		Screen1()
+//			.environmentObject(ViewModel())
+//	}
+//}
+

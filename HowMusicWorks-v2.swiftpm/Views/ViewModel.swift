@@ -8,7 +8,7 @@ struct ScreenContainer {
 }
 
 final class ViewModel: ObservableObject {
-	@Published var sound = Sound(waveA: true, waveB: false, waveC: false)
+	@Published var sound = Sound(waveA: true, waveB: true, waveC: true)
 	@Published var presentedScreens = ScreenContainer() {
 		didSet {
 			transitioning()
@@ -30,15 +30,15 @@ final class ViewModel: ObservableObject {
 		
 		print("transition")
 		
-		if !presentedScreens.screen2 {
-			sound.waves = WaveContainer(waveA: true, waveB: false, waveC: false)
-		}
-		else if presentedScreens.screen4 {
-			sound.waves = WaveContainer(waveA: true, waveB: true, waveC: false)
-		}
-		else {
-			sound.waves = WaveContainer()
-		}
+//		if !presentedScreens.screen2 {
+//			sound.waves = WaveContainer(waveA: true, waveB: false, waveC: false)
+//		}
+//		else if presentedScreens.screen4 {
+//			sound.waves = WaveContainer(waveA: true, waveB: true, waveC: false)
+//		}
+//		else {
+//			sound.waves = WaveContainer()
+//		}
 	}
 }
 
