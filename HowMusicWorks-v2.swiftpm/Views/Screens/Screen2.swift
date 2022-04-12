@@ -6,7 +6,7 @@ struct Screen2: View {
 	
 	var body: some View {
 		ScrollView(.vertical, showsIndicators: false) {
-			Text("What if we played 2 or more sounds at the same time? Great question!")
+			Text("Here is a better example, what if we played 2 or more sounds at the same time?")
 				.padding()
 				.multilineTextAlignment(.center)
 			Text("Here you can control 3 waves that are played at the same time, you can set a wave's frequency 0 to stop to listening to it, making possible to listen to only 1 or 2 waves.")
@@ -35,6 +35,6 @@ struct Screen2: View {
 
 
 		}
-		.navigationTitle(Text("Playing 2 sounds at the same time"))
+		.navigationTitle(Text("Playing 3 sounds at the same time"))
 	}
 }
