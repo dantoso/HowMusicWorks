@@ -8,7 +8,7 @@ struct ScreenContainer {
 }
 
 final class ViewModel: ObservableObject {
-	@Published var sound = Sound(waveA: true, waveB: true, waveC: true)
+	@Published var sound = Sound()
 	@Published var presentedScreens = ScreenContainer() {
 		didSet {
 			transitioning()

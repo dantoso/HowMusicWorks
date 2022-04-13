@@ -7,9 +7,15 @@ public struct InterfaceP2: View {
 	public var body: some View {
 		VStack() {
 			
-			WCSliderView(wave: $sound.waves.waveA)
-			WCSliderView(wave: $sound.waves.waveB)
-			WCSliderView(wave: $sound.waves.waveC)
+			Group {
+				WCSliderView(wave: $sound.waves.waveA)
+				WCSliderView(wave: $sound.waves.waveB)
+				WCSliderView(wave: $sound.waves.waveC)
+			}
+			.onChange(of: sound.waves) { newValue in
+				Synth.shared.isPicker = false
+				Synth.shared.setWaves(newValue)
+			}
 			
 			
 			let waveSum = ChordWave(container: sound.waves)
