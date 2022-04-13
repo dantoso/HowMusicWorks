@@ -11,12 +11,19 @@ struct MyApp: App {
 	
     var body: some Scene {
         WindowGroup {
-			NavigationView {
+			TabView {
 				Screen1()
-					.preferredColorScheme(.dark)
+					.onAppear {
+						viewModel.transitioning()
+					}
+				Screen2()
+					.onAppear {
+						viewModel.transitioning()
+					}
 			}
+			.preferredColorScheme(.dark)
 			.environmentObject(viewModel)
-			.navigationViewStyle(.stack)
+			.tabViewStyle(PageTabViewStyle())
         }
     }
 }

@@ -23,7 +23,7 @@ final class ViewModel: ObservableObject {
 		print("viewmodel morreu")
 	}
 	
-	private func transitioning() {
+	func transitioning() {
 		sound.isPlaying = false
 		Synth.shared.volume = 0
 		Synth.shared.resetTime()
