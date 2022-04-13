@@ -42,7 +42,7 @@ struct InfoView: View {
 				.padding()
 			
 			HStack {
-				Text("Some hints:\n- Try to find ratios of frequencies that sound nice. If you want a start, try listening to a frequency and double that frequency (ratio of 2/1).")
+				Text("Some hints:\n- Try to find ratios of frequencies that sound nice. If you want a start, try listening to a frequency and double that frequency (ratio of 2/1).\n- You can also use the visuals, try to see what kinds of patterns are drawn on the screen by nice sounding ratios, how long they are and how they repeat.")
 				Spacer()
 			}
 			.padding()
