@@ -10,8 +10,8 @@ public struct WCPythagorasPickerView: View {
 			Text("\(wave.frequency*100) Hz")
 				.padding(.top)
 			WaveView(wave: wave)
-				.padding(.bottom)
 			PythagorasNotePicker(frequency: $wave.frequency)
+				.padding(.bottom)
 			
 		}
 	}
