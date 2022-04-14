@@ -19,20 +19,20 @@ public struct PythagorasNotePicker: View {
 
 			Picker("", selection: $frequency) {
 				Text("first").tag(PythagoreanTuning.first)
-				Text("minor second").tag(PythagoreanTuning.minorSecond)
+				Text("flat second").tag(PythagoreanTuning.flatSecond)
 				Text("second").tag(PythagoreanTuning.second)
-				Text("minor third").tag(PythagoreanTuning.minorThird)
+				Text("flat third").tag(PythagoreanTuning.flatThird)
 				Text("third").tag(PythagoreanTuning.third)
 				Text("fourth").tag(PythagoreanTuning.fourth)
-				Text("minor fifth").tag(PythagoreanTuning.minorFifth)
+				Text("flat fifth").tag(PythagoreanTuning.flatFifth)
 			}
 			.pickerStyle(.segmented)
 			
 			Picker("", selection: $frequency) {
 				Text("fifth").tag(PythagoreanTuning.fifth)
-				Text("minor sixth").tag(PythagoreanTuning.minorSixth)
+				Text("flat sixth").tag(PythagoreanTuning.flatSixth)
 				Text("sixth").tag(PythagoreanTuning.sixth)
-				Text("minor seventh").tag(PythagoreanTuning.minorSeventh)
+				Text("flat seventh").tag(PythagoreanTuning.flatSeventh)
 				Text("seventh").tag(PythagoreanTuning.seventh)
 				Text("octave").tag(PythagoreanTuning.eighth)
 			}

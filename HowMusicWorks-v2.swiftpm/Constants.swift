@@ -30,28 +30,28 @@ public struct PythagoreanTuning {
 	}
 	
 	// a full step from the seventh but one octave below
-	static public var minorSecond: Double { fullStep(from: seventh) * 0.5 }
+	static public var flatSecond: Double { fullStep(from: seventh) * 0.5 }
 	
 	static public var second: Double { fullStep(from: first) }
 	
 	// first * 6/5
-	static public var minorThird: Double { first * 1.2 }
+	static public var flatThird: Double { first * 1.2 }
 	
 	// first * 5/4
 	static public var third: Double { first * 1.25 }
 	
-	static public var fourth: Double { fullStep(from: minorThird)}
+	static public var fourth: Double { fullStep(from: flatThird)}
 	
-	static public var minorFifth: Double { fullStep(from: third) }
+	static public var flatFifth: Double { fullStep(from: third) }
 	
 	// first * 3/2
 	static public var fifth: Double { first * 1.5 }
 	
-	static public var minorSixth: Double { fullStep(from: minorFifth)}
+	static public var flatSixth: Double { fullStep(from: flatFifth)}
 	
 	static public var sixth: Double { fullStep(from: fifth) }
 	
-	static public var minorSeventh: Double { fullStep(from: minorSixth)}
+	static public var flatSeventh: Double { fullStep(from: flatSixth)}
 	
 	static public var seventh: Double { fullStep(from: sixth) }
 	
