@@ -30,15 +30,7 @@ final class ViewModel: ObservableObject {
 		
 		print("transition")
 		
-//		if !presentedScreens.screen2 {
-//			sound.waves = WaveContainer(waveA: true, waveB: false, waveC: false)
-//		}
-//		else if presentedScreens.screen4 {
-//			sound.waves = WaveContainer(waveA: true, waveB: true, waveC: false)
-//		}
-//		else {
-//			sound.waves = WaveContainer()
-//		}
+		sound.waves = WaveContainer()
 	}
 }
 

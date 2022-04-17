@@ -32,24 +32,18 @@ struct Screen2: View {
 struct InfoView2: View {
 	var body: some View {
 		VStack {
-			Text("Sounds and feelings")
+			Text("Pythagorean tuning")
 				.font(.headline)
 				.padding()
 
-			Text("Hey there, welcome to my playground! Here, I'll try to show you how sound waves make us feel things!\nIn this screen you can control the frequency of 3 waves, they are added up to form a resultant wave that you can listen to by pressing play. The resultant and the other 3 waves have a visual representation drawn on the screen.")
+			Text("So, a long time ago, it is said that Pythagoras figured tuning out. In this page you can experiment with the 12 note system he created. He derived all of these notes by multiplying a base/original frequency, called the first in western music theory, by a specific ratio.")
 				.padding()
 
-			Text("So, how does music makes us feel? Well, I'll delay that answer for a bit, first I'd like you to try and do some investigation yourself.\nHere you have 3 waves, so try to isolate 1 of them by making the other 2 vibrate in 0 Hz. Then you can try and see how one frequency alone makes you feel as you change it around.")
+			Text("For example, the ratio of an octave is 2/1, so you multiply the first (in this example 440 Hz) by 2/1, and you get 880 Hz, which means 880 Hz is the octave of 440 Hz. The octave is a very important interval, if you pay close attention, the octave and the first sound very similar adn they produce a very comfortable sounding sound.")
 				.padding()
 
 			HStack {
-				Text("Some hints:\n- Try to find ratios of frequencies that sound nice. If you want a start, try listening to a frequency and double that frequency (ratio of 2/1).\n- You can also use the visuals, try to see what kinds of patterns are drawn by nice sounding ratios, how long they are and how they repeat.")
-				Spacer()
-			}
-			.padding()
-
-			HStack {
-				Text("Once you want to see the real answer just go to the next screen.")
+				Text("Some cool experiments:\n\n- Try to notice that when you play the first with a note near the octave your ears kind of want that note to become the octave, and when you actually change it to an octave, you feel resolution.\n\n- The same as above happens with notes near the first, but this way the resolution happens when you change it to the first.\n\n- Play a first with a third and a fifth, then after listening to it change the third to a flat third and notice that the sound becomes sadder and darker, change it back to a third and it lights up again.\n\n- Notice that sadder, closed or discomforable sounds draw more complicated and hard to understand patterns, while comfortable and brighter sounds draw simpler and easier to read patterns.")
 				Spacer()
 			}
 			.padding()
