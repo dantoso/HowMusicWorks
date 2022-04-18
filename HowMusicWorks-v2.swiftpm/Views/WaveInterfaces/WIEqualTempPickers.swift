@@ -1,6 +1,7 @@
 import SwiftUI
 
-struct InterfaceP5: View {
+//WI stands for Wave Interface
+struct WIEqualTempPickers: View {
 
 	@Binding var sound: Sound
 	

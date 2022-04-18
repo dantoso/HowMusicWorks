@@ -17,7 +17,7 @@ struct Screen2: View {
 				Spacer()
 			}
 			
-			InterfaceP3(sound: $viewModel.sound)
+			WIPythNotePickers(sound: $viewModel.sound)
 			
 			Spacer()
 		}

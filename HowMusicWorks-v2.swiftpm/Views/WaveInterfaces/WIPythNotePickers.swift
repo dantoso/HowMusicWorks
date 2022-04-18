@@ -1,10 +1,11 @@
 import SwiftUI
 
-public struct InterfaceP3: View {
+//WI stands for Wave Interface
+struct WIPythNotePickers: View {
 
 	@Binding var sound: Sound
 	
-	public var body: some View {
+	var body: some View {
 		VStack() {
 			
 			WCPythagorasPickerView(wave: $sound.waves.waveA)

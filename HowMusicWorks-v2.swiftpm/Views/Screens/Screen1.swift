@@ -17,7 +17,7 @@ struct Screen1: View {
 				Spacer()
 			}
 			
-			InterfaceP2(sound: $viewModel.sound)
+			WaveInterfaceSliders(sound: $viewModel.sound)
 			
 		}
 		.sheet(isPresented: $showInfo, onDismiss: nil) {

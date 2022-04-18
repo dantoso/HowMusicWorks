@@ -1,10 +1,10 @@
 import SwiftUI
 
-public struct InterfaceP2: View {
+struct WaveInterfaceSliders: View {
 
 	@Binding var sound: Sound
 	
-	public var body: some View {
+	var body: some View {
 		VStack() {
 			
 			Group {

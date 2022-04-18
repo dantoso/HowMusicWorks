@@ -19,7 +19,7 @@ struct Screen3: View {
 				Spacer()
 			}
 			
-			InterfaceP5(sound: $viewModel.sound)
+			WIEqualTempPickers(sound: $viewModel.sound)
 			
 			Spacer()
 		}
