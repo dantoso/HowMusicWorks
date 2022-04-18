@@ -23,9 +23,12 @@ public struct InterfaceP3: View {
 					Synth.shared.setWaves(newValue)
 				}
 			
-			let waveSum = ChordWave(container: sound.waves)
-			WaveView(wave: waveSum)
-				.padding(.top)
+//			ScrollView(.horizontal) {
+				let waveSum = ChordWave(container: sound.waves)
+				WaveView(wave: waveSum)
+					.frame(width: 4000)
+					.padding(.top)
+//			}
 			
 			PlayButton(sound: $sound)
 			
