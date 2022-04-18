@@ -16,7 +16,7 @@ public struct PythagorasNotePicker: View {
 					Text("Disable wave")
 				}
 			}
-			.buttonStyle(.bordered)
+//			.buttonStyle(.bordered)
 
 			Picker("", selection: $frequency) {
 				Text("first").tag(PythagoreanTuning.first)
