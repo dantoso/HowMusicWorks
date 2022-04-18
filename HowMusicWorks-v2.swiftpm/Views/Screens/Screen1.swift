@@ -35,7 +35,7 @@ struct InfoView: View {
 				.font(.headline)
 				.padding()
 			
-			Text("\tHey there, welcome to my playground! Here, I'll try to show you how sound waves make us feel things!\n\tIn this screen you can control the frequency of 3 waves, they are added up to form a resultant wave that you can listen to by pressing play. The resultant and the other 3 waves have a visual representation drawn on the screen.")
+			Text("\tHey there, welcome to my playground! Here, I made 3 pages that you can play with to hear and see how sound waves make us feel things!\n\tIn this screen you can control the frequency of 3 waves, they are added up to form a resultant wave that you can listen to by pressing play. The resultant and the other 3 waves have a visual representation drawn on the screen.")
 				.padding()
 			
 			Text("\tSo, how does music makes us feel? Well, I'll delay that answer for a bit, first I'd like you to try and do some investigation yourself.\n\tHere you have 3 waves, so try to isolate 1 of them by making the other 2 vibrate in 0 Hz. Then you can try and see how one frequency alone makes you feel as you change it around.")
