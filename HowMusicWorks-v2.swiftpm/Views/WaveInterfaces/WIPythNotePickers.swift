@@ -27,7 +27,7 @@ struct WIPythNotePickers: View {
 //			ScrollView(.horizontal) {
 				let waveSum = ChordWave(container: sound.waves)
 				WaveView(wave: waveSum)
-					.frame(width: 4000)
+//					.frame(width: 4000)
 					.padding(.top)
 //			}
 			

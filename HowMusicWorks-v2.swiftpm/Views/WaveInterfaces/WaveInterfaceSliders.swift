@@ -21,7 +21,7 @@ struct WaveInterfaceSliders: View {
 //			ScrollView(.horizontal) {
 				let waveSum = ChordWave(container: sound.waves)
 				WaveView(wave: waveSum)
-					.frame(width: .infinity)
+//					.frame(width: .infinity)
 					.padding(.top)
 					.onChange(of: sound.waves) { newValue in
 						Synth.shared.isPicker = false
