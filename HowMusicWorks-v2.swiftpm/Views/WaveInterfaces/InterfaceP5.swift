@@ -17,6 +17,11 @@ struct InterfaceP5: View {
 					Synth.shared.isPicker = true
 					Synth.shared.setWaves(newValue)
 				}
+			WCEqualTempPicker(wave: $sound.waves.waveC)
+				.onChange(of: sound.waves) { newValue in
+					Synth.shared.isPicker = true
+					Synth.shared.setWaves(newValue)
+				}
 			
 			let waveSum = ChordWave(container: sound.waves)
 			WaveView(wave: waveSum)

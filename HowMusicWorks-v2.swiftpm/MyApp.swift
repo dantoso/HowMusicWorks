@@ -20,6 +20,10 @@ struct MyApp: App {
 					.onAppear {
 						viewModel.transitioning()
 					}
+				Screen3()
+					.onAppear {
+						viewModel.transitioning()
+					}
 			}
 			.preferredColorScheme(.dark)
 			.environmentObject(viewModel)
