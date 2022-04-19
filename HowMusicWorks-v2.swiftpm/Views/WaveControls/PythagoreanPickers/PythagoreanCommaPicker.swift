@@ -13,7 +13,7 @@ public struct PythagoreanCommaNotePicker: View {
 					EmptyView()
 				}
 				else {
-					Text("Disable wave")
+					Text("Mute wave")
 				}
 			}
 			

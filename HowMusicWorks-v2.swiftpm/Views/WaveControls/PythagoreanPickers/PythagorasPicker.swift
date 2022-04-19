@@ -13,7 +13,7 @@ public struct PythagorasNotePicker: View {
 					EmptyView()
 				}
 				else {
-					Text("Disable wave")
+					Text("Mute wave")
 				}
 			}
 //			.buttonStyle(.bordered)

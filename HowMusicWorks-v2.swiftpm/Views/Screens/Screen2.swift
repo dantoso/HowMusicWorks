@@ -14,6 +14,9 @@ struct Screen2: View {
 					Image(systemName: "info.circle")
 						.font(Font.system(size: 24))
 				}
+				Text("Pythagorean tuning")
+					.font(.title)
+					.padding(.leading)
 				Spacer()
 			}
 			

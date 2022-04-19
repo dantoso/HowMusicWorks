@@ -18,23 +18,23 @@ struct EqualTemperedPicker: View {
 			}
 			
 			Picker("", selection: $frequency) {
-				Text("A4").tag(EqualTempered.a)
-				Text("A#4").tag(EqualTempered.aSharp)
-				Text("B4").tag(EqualTempered.b)
-				Text("C5").tag(EqualTempered.c)
-				Text("C#5").tag(EqualTempered.cSharp)
-				Text("D5").tag(EqualTempered.d)
-				Text("D#5").tag(EqualTempered.dSharp)
+				Text("first").tag(EqualTempered.a)
+				Text("flat second").tag(EqualTempered.aSharp)
+				Text("second").tag(EqualTempered.b)
+				Text("flat third").tag(EqualTempered.c)
+				Text("third").tag(EqualTempered.cSharp)
+				Text("fourth").tag(EqualTempered.d)
+				Text("flat fifth").tag(EqualTempered.dSharp)
 			}
 			.pickerStyle(.segmented)
 			
 			Picker("", selection: $frequency) {
-				Text("E5").tag(EqualTempered.e)
-				Text("F5").tag(EqualTempered.f)
-				Text("F#5").tag(EqualTempered.fSharp)
-				Text("G5").tag(EqualTempered.g)
-				Text("G#5").tag(EqualTempered.gSharp)
-				Text("A5").tag(EqualTempered.a*2)
+				Text("fifth").tag(EqualTempered.e)
+				Text("flat sixth").tag(EqualTempered.f)
+				Text("sixth").tag(EqualTempered.fSharp)
+				Text("flat seventh").tag(EqualTempered.g)
+				Text("seventh").tag(EqualTempered.gSharp)
+				Text("octave").tag(EqualTempered.a*2)
 				Text("A#5").tag(EqualTempered.aSharp*2)
 				
 			}

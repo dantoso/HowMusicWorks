@@ -12,8 +12,11 @@ struct Screen1: View {
 					showInfo = true
 				} label: {
 					Image(systemName: "info.circle")
-						.font(Font.system(size: 24))
+						.font(Font.system(size: 20))
 				}
+				Text("Sounds and feelings")
+					.font(.title)
+					.padding(.leading)
 				Spacer()
 			}
 			
