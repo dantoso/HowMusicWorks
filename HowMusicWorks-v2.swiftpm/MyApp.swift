@@ -13,12 +13,12 @@ struct MyApp: App {
         WindowGroup {
 			VStack {
 				TabView {
-					Screen1()
+					Page1()
 						.onAppear {
 							Synth.shared.isPicker = false
 							viewModel.transitioning()
 						}
-					Screen2()
+					Page2()
 						.onDisappear {
 							Synth.shared.isPicker = false
 						}
@@ -26,7 +26,7 @@ struct MyApp: App {
 							Synth.shared.isPicker = true
 							viewModel.transitioning()
 						}
-					Screen3()
+					Page3()
 						.onAppear {
 							Synth.shared.isPicker = true
 							viewModel.transitioning()

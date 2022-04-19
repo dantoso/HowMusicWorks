@@ -1,7 +1,7 @@
 import SwiftUI
 
 
-struct Screen3: View {
+struct Page3: View {
 	
 	@EnvironmentObject var viewModel: ViewModel
 	@State var showInfo = false
