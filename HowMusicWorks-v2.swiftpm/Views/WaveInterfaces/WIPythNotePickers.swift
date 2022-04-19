@@ -10,17 +10,14 @@ struct WIPythNotePickers: View {
 			
 			WCPythagorasPickerView(wave: $sound.waves.waveA)
 				.onChange(of: sound.waves) { newValue in
-					Synth.shared.isPicker = true
 					Synth.shared.setWaves(newValue)
 				}
 			WCPythagorasPickerView(wave: $sound.waves.waveB)
 				.onChange(of: sound.waves) { newValue in
-					Synth.shared.isPicker = true
 					Synth.shared.setWaves(newValue)
 				}
 			WCPythagorasPickerView(wave: $sound.waves.waveC)
 				.onChange(of: sound.waves) { newValue in
-					Synth.shared.isPicker = true
 					Synth.shared.setWaves(newValue)
 				}
 			

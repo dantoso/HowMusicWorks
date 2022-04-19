@@ -24,13 +24,13 @@ final class ViewModel: ObservableObject {
 	}
 	
 	func transitioning() {
-		sound.isPlaying = false
-		Synth.shared.volume = 0
-		Synth.shared.resetTime()
+//		sound.isPlaying = false
+//		Synth.shared.volume = 0
+//		Synth.shared.resetTime()
 		
 		print("transition")
 		
-		sound.waves = WaveContainer()
+//		sound.waves = WaveContainer()
 	}
 }
 

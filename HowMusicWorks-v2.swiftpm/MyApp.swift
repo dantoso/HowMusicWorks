@@ -15,30 +15,32 @@ struct MyApp: App {
 				TabView {
 					Screen1()
 						.onAppear {
+							Synth.shared.isPicker = false
 							viewModel.transitioning()
 						}
 					Screen2()
 						.onAppear {
+							Synth.shared.isPicker = true
 							viewModel.transitioning()
 						}
 					Screen3()
 						.onAppear {
+							Synth.shared.isPicker = true
 							viewModel.transitioning()
 						}
 				}
 				.tabViewStyle(PageTabViewStyle())
 				
-//				ScrollView(.horizontal) {
+				ScrollView(.horizontal) {
 					let waveSum = ChordWave(container: viewModel.sound.waves)
 					WaveView(wave: waveSum)
-//						.frame(width: 2000)
+						.frame(width: 4000)
 						.padding(.top)
 						.onChange(of: viewModel.sound.waves) { newValue in
-							Synth.shared.isPicker = false
 							Synth.shared.setWaves(newValue)
 						}
 					
-//				}
+				}
 				
 				PlayButton(sound: $viewModel.sound)
 			}

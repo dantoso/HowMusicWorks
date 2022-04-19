@@ -9,17 +9,14 @@ struct WaveInterfaceSliders: View {
 			
 				WCSliderView(wave: $sound.waves.waveA)
 					.onChange(of: sound.waves) { newValue in
-						Synth.shared.isPicker = false
 						Synth.shared.setWaves(newValue)
 					}
 				WCSliderView(wave: $sound.waves.waveB)
 					.onChange(of: sound.waves) { newValue in
-						Synth.shared.isPicker = false
 						Synth.shared.setWaves(newValue)
 					}
 				WCSliderView(wave: $sound.waves.waveC)
 					.onChange(of: sound.waves) { newValue in
-						Synth.shared.isPicker = false
 						Synth.shared.setWaves(newValue)
 					}
 	
