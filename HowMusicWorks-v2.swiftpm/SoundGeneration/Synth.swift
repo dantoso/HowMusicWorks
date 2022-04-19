@@ -8,6 +8,7 @@ final public class Synth {
 	public static var shared: Synth { return singleton }
 	public let audioEngine: AVAudioEngine
 	
+	/// Container for the 3 waves that compose the sound that can be played.
 	public var waves = WaveContainer(waveA: false, waveB: false, waveC: false) {
 		didSet {
 			if oldValue.waveA.frequency != 0 {
@@ -34,10 +35,12 @@ final public class Synth {
 		}
 	}
 	
+	// the delta difference to the last computed frequency for each wave.
 	var deltaAHz: Float = 0
 	var deltaBHz: Float = 0
 	var deltaCHz: Float = 0
 	
+	// frequency in hertz for each wave
 	var aHz: Float {
 		Float(waves.waveA.frequency) * 100
 	}
@@ -48,7 +51,7 @@ final public class Synth {
 		Float(waves.waveC.frequency) * 100
 	}
 	
-	
+	/// Volume of the Synth, goes from 0 to 1.
 	public var volume: Float {
 		get {
 			audioEngine.mainMixerNode.outputVolume
@@ -57,21 +60,30 @@ final public class Synth {
 			audioEngine.mainMixerNode.outputVolume = newValue
 		}
 	}
+	
+	// the time x for each wave (it makes sense in the source node closure)
 	var timeA: Float = 0
 	var timeB: Float = 0
 	var timeC: Float = 0
+	
+	/// Device sample rate. Sample rate is how many time frames there are in a second. Time frames are the moments at which audio values can be updated in audio buffers. Often the sample value is around 44 000, so the audio buffers are updated at around 44 000 a second.
 	let sampleRate: Double
+	
+	/// The from a time frame to the next (1/sampleRate)
 	let deltaTime: Float
 	public var isPicker = false
 	
+	/// The property responsible to comunicate with the device's audio buffers and deliver them their specific values for every frame of time.
 	lazy var sourceNode = AVAudioSourceNode { (_, _, frameCount, audioBufferList) -> OSStatus in
 		
 		let ablPointer = UnsafeMutableAudioBufferListPointer(audioBufferList)
 		
+		// the difference between the old frequency and the new one, for each wave.
 		let aRamp = self.deltaAHz
 		let bRamp = self.deltaBHz
 		let cRamp = self.deltaCHz
 		
+		// old frequency for each wave
 		let oldA = self.aHz - aRamp
 		let oldB = self.bHz - bRamp
 		let oldC = self.cHz - cRamp
@@ -80,25 +92,37 @@ final public class Synth {
 		let bPeriod = 1/oldB
 		let cPeriod = 1/oldC
 
+		// for every frame in sample...
 		for frame in 0..<Int(frameCount) {
+			
+			// calculate every sample value for each wave
 			let aSample = self.sampleValForSine(oldFrequency: oldA, ramp: aRamp, period: aPeriod, time: self.timeA)
 			let bSample = self.sampleValForSine(oldFrequency: oldB, ramp: bRamp, period: bPeriod, time: self.timeB)
 			let cSample = self.sampleValForSine(oldFrequency: oldC, ramp: cRamp, period: cPeriod, time: self.timeC)
 			
-			// so they are never out of phase when using the picker:
+			// the if is here so they are never out of phase when using the picker
 			if !self.isPicker {
+				
+				// updates the time so it is a value from 0 to the wave's old period.
+				// this is to solve sound bugs that happen on sound change in real time
 				self.timeA = fmod(self.timeA, aPeriod)
 				self.timeB = fmod(self.timeB, bPeriod)
 				self.timeC = fmod(self.timeC, cPeriod)
 			}
 			
+			// get the total sample value by adding every sample value for each wave
 			let sampleTotalVal = aSample + bSample + cSample
+			
+			// progressing time for each wave
 			self.timeA += self.deltaTime
 			self.timeB += self.deltaTime
 			self.timeC += self.deltaTime
 			
+			// for every available audio buffer...
 			for buffer in ablPointer {
 				let buf: UnsafeMutableBufferPointer<Float> = UnsafeMutableBufferPointer(buffer)
+				
+				// give the buffer its sample value for that frame of time.
 				buf[frame] = sampleTotalVal
 			}
 			
@@ -106,10 +130,20 @@ final public class Synth {
 		return noErr
 	}
 	
+	/// Calculates the sample value for a sine wave, taking into account the ramp necessary to make the increase or decrease of frequency sound smooth.
+	/// - Parameters:
+	///   - oldFrequency: the old frequency that is to be updated to a new one
+	///   - ramp: difference of frequency between the old frequency and the new one
+	///   - period: period for the wave at its old frequency
+	///   - time: the time of reference to be used (timeA, timeB, timeC)
+	/// - Returns: Sample value
 	func sampleValForSine(oldFrequency: Float, ramp: Float, period: Float, time: Float) -> Float {
 		
 		let currentTime = fmod(time, period)
+		
+		// how complete is the transition between the new frequency and the old one
 		let percent = currentTime/period
+		
 		let frequency = oldFrequency + ramp * percent
 		
 		let angle = 2*Float.pi * currentTime
@@ -138,22 +172,6 @@ final public class Synth {
 		
 	}
 	
-//	func sampleValForwaves() -> Float {
-//		let aVal = getSampleValFor(waves.a)
-//		let bVal = getSampleValFor(waves.b)
-//		let cVal = getSampleValFor(waves.c)
-//
-//		return aVal + bVal + cVal
-//	}
-//
-//	func getSampleValFor(_ wave: PureWave) -> Float {
-//		let angle = 2*Double.pi * Double(time)
-//		let sine = sin(angle * wave.frequency * 100)
-//		let sampleVal = Float(sine)
-//
-//		return sampleVal
-//	}
-
 	init() {
 		audioEngine = AVAudioEngine()
 		let mainMixer = audioEngine.mainMixerNode
@@ -174,6 +192,7 @@ final public class Synth {
 		start()
 	}
 	
+	/// Stops the engine
 	public func stop() {
 		audioEngine.stop()
 	}
@@ -188,6 +207,7 @@ final public class Synth {
 		timeC = 0
 	}
 	
+	/// Starts the engine (error throw is not handled so it might not work)
 	public func start() {
 		do {
 			try audioEngine.start()
@@ -195,15 +215,12 @@ final public class Synth {
 		catch { print("Could not start engine: \(error.localizedDescription)") }
 	}
 	
+	/// Updates the value for the synth's wave container
 	public func setWaves(_ waves: WaveContainer) {
-//		volume = 0
-		
 		if isPicker {
 			resetTime()
 		}
 		self.waves = waves
-		
-//		volume = 0.2
 	}
 	
 }
