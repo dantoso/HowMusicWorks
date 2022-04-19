@@ -24,10 +24,10 @@ struct WIEqualTempPickers: View {
 					Synth.shared.setWaves(newValue)
 				}
 			
-			let waveSum = ChordWave(container: sound.waves)
-			WaveView(wave: waveSum)
-			
-			PlayButton(sound: $sound)
+//			let waveSum = ChordWave(container: sound.waves)
+//			WaveView(wave: waveSum)
+//			
+//			PlayButton(sound: $sound)
 			
 		}
 		.frame(alignment: .center)

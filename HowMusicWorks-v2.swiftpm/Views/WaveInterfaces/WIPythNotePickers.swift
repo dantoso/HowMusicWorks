@@ -24,14 +24,14 @@ struct WIPythNotePickers: View {
 					Synth.shared.setWaves(newValue)
 				}
 			
-//			ScrollView(.horizontal) {
-				let waveSum = ChordWave(container: sound.waves)
-				WaveView(wave: waveSum)
-//					.frame(width: 4000)
-					.padding(.top)
-//			}
-			
-			PlayButton(sound: $sound)
+////			ScrollView(.horizontal) {
+//				let waveSum = ChordWave(container: sound.waves)
+//				WaveView(wave: waveSum)
+////					.frame(width: 4000)
+//					.padding(.top)
+////			}
+//			
+//			PlayButton(sound: $sound)
 			
 		}
 		.frame(alignment: .center)
