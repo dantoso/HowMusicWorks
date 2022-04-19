@@ -19,6 +19,9 @@ struct MyApp: App {
 							viewModel.transitioning()
 						}
 					Screen2()
+						.onDisappear {
+							Synth.shared.isPicker = false
+						}
 						.onAppear {
 							Synth.shared.isPicker = true
 							viewModel.transitioning()
@@ -31,6 +34,8 @@ struct MyApp: App {
 				}
 				.tabViewStyle(PageTabViewStyle())
 				
+				PlayButton(sound: $viewModel.sound)
+				
 				ScrollView(.horizontal) {
 					let waveSum = ChordWave(container: viewModel.sound.waves)
 					WaveView(wave: waveSum)
@@ -41,8 +46,6 @@ struct MyApp: App {
 						}
 					
 				}
-				
-				PlayButton(sound: $viewModel.sound)
 			}
 			.preferredColorScheme(.dark)
 			.environmentObject(viewModel)

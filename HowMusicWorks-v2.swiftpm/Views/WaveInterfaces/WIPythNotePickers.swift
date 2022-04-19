@@ -6,7 +6,7 @@ struct WIPythNotePickers: View {
 	@Binding var sound: Sound
 	
 	var body: some View {
-		VStack() {
+		VStack {
 			
 			WCPythagorasPickerView(wave: $sound.waves.waveA)
 				.onChange(of: sound.waves) { newValue in
@@ -20,15 +20,6 @@ struct WIPythNotePickers: View {
 				.onChange(of: sound.waves) { newValue in
 					Synth.shared.setWaves(newValue)
 				}
-			
-////			ScrollView(.horizontal) {
-//				let waveSum = ChordWave(container: sound.waves)
-//				WaveView(wave: waveSum)
-////					.frame(width: 4000)
-//					.padding(.top)
-////			}
-//			
-//			PlayButton(sound: $sound)
 			
 		}
 		.frame(alignment: .center)

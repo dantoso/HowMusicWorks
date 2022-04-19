@@ -5,37 +5,20 @@ struct WaveInterfaceSliders: View {
 	@Binding var sound: Sound
 	
 	var body: some View {
-		VStack() {
+		VStack {
 			
-				WCSliderView(wave: $sound.waves.waveA)
-					.onChange(of: sound.waves) { newValue in
-						Synth.shared.setWaves(newValue)
-					}
-				WCSliderView(wave: $sound.waves.waveB)
-					.onChange(of: sound.waves) { newValue in
-						Synth.shared.setWaves(newValue)
-					}
-				WCSliderView(wave: $sound.waves.waveC)
-					.onChange(of: sound.waves) { newValue in
-						Synth.shared.setWaves(newValue)
-					}
-	
-			
-			
-////			ScrollView(.horizontal) {
-//				let waveSum = ChordWave(container: sound.waves)
-//				WaveView(wave: waveSum)
-////					.frame(width: .infinity)
-//					.padding(.top)
-//					.onChange(of: sound.waves) { newValue in
-//						Synth.shared.isPicker = false
-//						Synth.shared.setWaves(newValue)
-//					}
-////			}
-//
-//			PlayButton(sound: $sound)
-//				.padding(.bottom)
-			
+			WCSliderView(wave: $sound.waves.waveA)
+				.onChange(of: sound.waves) { newValue in
+					Synth.shared.setWaves(newValue)
+				}
+			WCSliderView(wave: $sound.waves.waveB)
+				.onChange(of: sound.waves) { newValue in
+					Synth.shared.setWaves(newValue)
+				}
+			WCSliderView(wave: $sound.waves.waveC)
+				.onChange(of: sound.waves) { newValue in
+					Synth.shared.setWaves(newValue)
+				}
 		}
 		.frame(alignment: .center)
 		.preferredColorScheme(.dark)
