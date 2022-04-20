@@ -31,6 +31,11 @@ struct MyApp: App {
 							Synth.shared.isPicker = true
 							viewModel.transitioning()
 						}
+					Page4()
+						.onAppear {
+							Synth.shared.isPicker = true
+							viewModel.transitioning()
+						}
 				}
 				.tabViewStyle(PageTabViewStyle())
 				

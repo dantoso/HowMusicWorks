@@ -13,7 +13,7 @@ struct EqualTemperedPicker: View {
 					EmptyView()
 				}
 				else {
-					Text("Disable wave")
+					Text("Mute wave")
 				}
 			}
 			
@@ -35,7 +35,6 @@ struct EqualTemperedPicker: View {
 				Text("flat seventh").tag(EqualTempered.g)
 				Text("seventh").tag(EqualTempered.gSharp)
 				Text("octave").tag(EqualTempered.a*2)
-				Text("A#5").tag(EqualTempered.aSharp*2)
 				
 			}
 			.pickerStyle(.segmented)

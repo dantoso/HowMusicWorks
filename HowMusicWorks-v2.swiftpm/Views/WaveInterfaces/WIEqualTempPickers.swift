@@ -6,7 +6,7 @@ struct WIEqualTempPickers: View {
 	@Binding var sound: Sound
 	
 	var body: some View {
-		VStack() {
+		VStack {
 			
 			WCEqualTempPicker(wave: $sound.waves.waveA)
 				.onChange(of: sound.waves) { newValue in
