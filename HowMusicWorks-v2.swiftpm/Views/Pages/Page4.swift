@@ -36,22 +36,28 @@ struct Page4: View {
 struct InfoView4: View {
 	var body: some View {
 		VStack {
-			Text("Equal temperament")
+			Text("Play around!")
 				.font(.headline)
 				.padding()
 
-			Text("\tIf your're really good at maths or already know about tuning, you probably know that pythagorean tuning has a big drawback. When you play in wider ranges using the pythagorean tuning, there are certain fifths that sound extremely bad, which is not supposed to happen, fifths are supposed to sound almost as nice as an octave.")
-				.padding()
-
-			Text("\tLooking to solve this problem, many other tuning systems were developed. The one most accepted and popular in western music is the equal temperament. Instead of using multiple ratios to derive the intervals equal temprament only uses the octave ratio (2/1) and inside the first and octave interval it calculates other 10 equally spaced notes. Using this system of equally spaced notes makes it is possible to play any interval with the guarantee that it will sound the same throughout any other range.")
+			Text("\tIn this page you can't see the pure waves that make the resultant, instead, I've increased the range of notes you can play, they are tuned in equal temperament, which is the tuning system we use extensively in western music. This way, you can try to play some chords and tunes here!")
 				.padding()
 			
-			Text("\tHowever, the equal temperament also has a deawback, which is not being mathematically perfect. While the pythagorean tuning is perfect and the waveforms draw consistent patterns (and because of that it sounds brighter), equal temperament uses irrational numbers to tune its notes, which makes some intervals not sound very harmonic (in comparison to pythagorean tuning).")
+			Text("\tA cool detail, the notes in the picker are displayed in such a way that every note immediately below another in the screen is that note's fifth (E5 is the fifth of A4, A4 is the fifth of D4, etc).")
 				.padding()
 			
-			Text("\tLuckily though, our ears don't care! The difference exists and can be heard, but that doesn't influence much in the way we feel the music. That's why equal temperament works and is used worldwide nowadays.")
+			Text("What are these weird symbols??? (C#5, G3, F4)")
+				.padding(.bottom)
+				.font(.headline)
+			
+			Text("\tThey represent notes in western music notation, there are 7 different notes represented by alphabet letters (A to G) and we differentiate how high or low they are by numbers after those letters. For example A4 is the octave of A3, F#5 is the octave of F#4.\n\tThere are also sharp notes, they are noted by the # after the letter, so there is an A and an A sharp (A#). Sharp notes are notes a little bit higher pitched than their natural counterparts, so A (A natural) is a bit lower than A# (A sharp). Not all the notes have a sharper \"version\", actually only B and E don't have sharper \"versions\".")
+				.padding([.bottom, .leading, .trailing])
+			
+			Text("\tAnd that's it, it makes me very happy that you got here, hope you had the same fun playing and discovering about sound as I had creating this (I had a lot of fun).")
 				.padding()
 			
+			Text("Thanks! :D")
+				.padding()
 			Spacer()
 		}
 	}

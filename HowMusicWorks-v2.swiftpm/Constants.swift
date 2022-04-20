@@ -1,6 +1,6 @@
 import SwiftUI
 
-
+// here to go higher a half step you multiply the frequency by (12√2), because (12√2)ˆ12 = 2, then after 12 half steps, you get the octave of the first note.
 public struct EqualTempered {
 	static public let a: Double = 4.400
 	static public let aSharp: Double = 4.661637615180899

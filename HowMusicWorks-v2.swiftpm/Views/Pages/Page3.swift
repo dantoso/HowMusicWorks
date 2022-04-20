@@ -40,7 +40,7 @@ struct InfoView3: View {
 			Text("Equal temperament")
 				.font(.headline)
 				.padding()
-
+			
 			Text("\tIf your're really good at maths or already know about tuning, you probably know that pythagorean tuning has a big drawback. When you play in wider ranges using the pythagorean tuning, there are certain fifths that sound extremely bad, which is not supposed to happen, fifths are supposed to sound almost as nice as an octave.")
 				.padding()
 

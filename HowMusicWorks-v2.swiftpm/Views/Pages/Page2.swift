@@ -46,14 +46,27 @@ struct InfoView2: View {
 				.padding()
 
 			HStack {
+				Text("\tNormally comfortable sounding notes (when played with non-flat notes): first, octave, fifth, third, flat third.")
+				Spacer()
+			}
+			.padding()
+			
+			HStack {
+				Text("\tNormally uncomfortable sounding notes (when played with non-flat notes): flat fifth, flat sixth, flat second, seventh.")
+				Spacer()
+			}
+			.padding()
+			
+			HStack {
 				Text("Some cool experiments:\n\n- Try to notice that when you play the first with another note near the octave, your ears kind of want that note to become the octave, and when you actually change it to an octave, you feel resolution.\n\n- The same as above happens with notes near the first, but this way the resolution happens when you change it to the first.\n\n- Play a first with a third and a fifth, then after listening to it change the third to a flat third and notice that the sound becomes sadder and darker, change it back to a third and it lights up again.\n\n- Notice that sadder, closed or discomforable sounds draw more complicated and hard to understand patterns, while comfortable and brighter sounds draw simpler and easier to read patterns on the waveform.")
 				Spacer()
 			}
 			.padding()
-
+			
+			Text("\tFor centuries musicians have been playing \"uncomfortable\" notes to generate tension and then \"comfortable\" notes to release this tension, therefore making you feel more complex feelings. That is the basically what governs melody and harmony in western music.\n\tBut the system created by Pythagoras has a problem.")
+				.padding()
+			
 			Spacer()
-
-
 		}
 	}
 }
