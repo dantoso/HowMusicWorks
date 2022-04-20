@@ -41,6 +41,12 @@ struct InfoView: View {
 			Text("\tHey there, welcome to my playground! Here, I made 3 interfaces (separated by pages) that you can play with to hear and see how sound waves make us feel things!\n\tIn these interfaces you can control the frequency of 3 waves, they are added up to form a resultant wave that you can listen to by pressing play. The resultant and the other 3 waves have a visual representation drawn on the screen.")
 				.padding()
 			
+			Text("\tThe difference between each page lies in how you can control the pure waves. Here you use sliders, in the second you choose 12 pythagorean notes, on the third you choose 12 equal tempered notes.")
+				.padding()
+			
+			Text("\tAlso, all the info in all the pages are optional, in essence, this playground is just a sound frequency generator that works in real time, so just toying with it and paying attention to the sounds, the waves drawn and how you feel listening to each sound is more than enough.")
+				.padding()
+			
 			Text("\tSo, how does music makes us feel? Well, I'll delay that answer for a bit, first I'd like you to try and do some investigation yourself.\n\tHere you have 3 waves, so try to isolate 1 of them by making the other 2 vibrate in 0 Hz. Then you can try and see how one frequency alone makes you feel as you change it around.")
 				.padding()
 			
