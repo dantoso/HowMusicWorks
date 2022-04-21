@@ -15,7 +15,7 @@ struct Page4: View {
 					Image(systemName: "info.circle")
 						.font(Font.system(size: 24))
 				}
-				Text("Equal temperament")
+				Text("Play around!")
 					.font(.title)
 					.padding(.leading)
 				Spacer()
