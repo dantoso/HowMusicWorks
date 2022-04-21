@@ -25,8 +25,8 @@ public struct WCPythagoreanCommaPickerView: View {
 			Text("\(wave.frequency*100) Hz")
 				.padding(.top)
 			WaveView(wave: wave)
-				.padding(.bottom)
 			PythagoreanCommaNotePicker(frequency: $wave.frequency)
+				.padding(.bottom)
 			
 		}
 	}

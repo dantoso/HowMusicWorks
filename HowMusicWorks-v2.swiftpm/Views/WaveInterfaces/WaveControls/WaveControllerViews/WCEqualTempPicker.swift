@@ -8,9 +8,8 @@ struct WCEqualTempPicker: View {
 			Text("\(wave.frequency*100) Hz")
 				.padding(.top)
 			WaveView(wave: wave)
-				.padding(.bottom)
 			EqualTemperedPicker(frequency: $wave.frequency)
-			
+				.padding(.bottom)
 		}
 	}
 }

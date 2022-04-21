@@ -12,6 +12,7 @@ public struct WCSliderView: View {
 			WaveView(wave: wave)
 				.padding(.bottom)
 			Slider(value: $wave.frequency, in: 0...10)
+				.padding([.trailing, .leading])
 			
 		}
 	}
