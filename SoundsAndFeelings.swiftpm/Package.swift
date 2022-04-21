@@ -8,13 +8,13 @@ import PackageDescription
 import AppleProductTypes
 
 let package = Package(
-    name: "HowMusicWorks",
+    name: "Sounds and feelings",
     platforms: [
         .iOS("15.2")
     ],
     products: [
         .iOSApplication(
-            name: "HowMusicWorks",
+            name: "Sounds and feelings",
             targets: ["AppModule"],
             bundleIdentifier: "eu-ne.HowMusicWorks",
             teamIdentifier: "Y7F52ZVSDT",

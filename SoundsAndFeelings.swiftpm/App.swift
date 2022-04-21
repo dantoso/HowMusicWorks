@@ -15,18 +15,16 @@ struct MyApp: App {
 			GeometryReader { geometry in
 				VStack(spacing: 0) {
 					
-					Spacer(minLength: geometry.size.height*0.035)
+					Spacer(minLength: geometry.size.height*0.04)
 					
 					ResultantWave()
-						.layoutPriority(1)
 					
 					Pages()
 				}
-				.preferredColorScheme(.dark)
 				.environmentObject(viewModel)
+//				.preferredColorScheme(.dark)
 			}
-			.statusBar(hidden: true)
-
+			
         }
     }
 }
