@@ -40,6 +40,9 @@ struct Pages: View {
 					Synth.shared.isPicker = false
 					viewModel.transitioning()
 				}
+				.onDisappear {
+					Synth.shared.isPicker = true
+				}
 			Page2()
 				.onDisappear {
 					Synth.shared.isPicker = false
