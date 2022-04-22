@@ -15,7 +15,7 @@ struct MyApp: App {
 			GeometryReader { geometry in
 				VStack(spacing: 0) {
 					
-					Spacer(minLength: geometry.size.height*0.04)
+					Spacer(minLength: geometry.size.height*0.035)
 					
 					ResultantWave(sound: $sound)
 					

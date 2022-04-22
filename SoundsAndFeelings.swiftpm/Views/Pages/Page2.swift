@@ -45,17 +45,8 @@ struct InfoView2: View {
 			Text("\tFor example, the ratio of an octave (a fancy name for the last note in the scale) is 2/1, so you multiply the first (in this example 440 Hz) by 2/1, and you get 880 Hz, which means 880 Hz is the octave of 440 Hz.")
 				.padding()
 			
-			Text("\tPythagoras' system is thought around \"comfortable\" sounding intervals and \"uncomfortable\" sounding intervals")
-				.padding()
-
 			HStack {
-				Text("\tComfortable sounding notes (when played with non-flat notes): first, octave, fifth, third, flat third.")
-				Spacer()
-			}
-			.padding()
-			
-			HStack {
-				Text("\tUncomfortable sounding notes (when played with non-flat notes): flat fifth, flat sixth, flat second, seventh.")
+				Text("\tPythagoras' system is thought around \"comfortable\" sounding intervals and \"uncomfortable\" sounding intervals.\n\tComfortable sounding notes (when played with non-flat notes): first, octave, fifth, third, flat third.\n\tUncomfortable sounding notes (when played with non-flat notes): flat fifth, flat sixth, flat second, seventh.")
 				Spacer()
 			}
 			.padding()
