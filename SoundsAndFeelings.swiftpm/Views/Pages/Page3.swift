@@ -3,7 +3,7 @@ import SwiftUI
 
 struct Page3: View {
 	
-	@EnvironmentObject var viewModel: ViewModel
+	@Binding var sound: Sound
 	@State var showInfo = false
 	
 	var body: some View {
@@ -22,7 +22,7 @@ struct Page3: View {
 				Spacer()
 			}
 			
-			WIEqualTempPickers(sound: $viewModel.sound)
+			WIEqualTempPickers(sound: $sound)
 			
 			Spacer()
 		}

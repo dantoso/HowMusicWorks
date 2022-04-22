@@ -3,7 +3,7 @@ import SwiftUI
 @main
 struct MyApp: App {
 	
-	@StateObject var viewModel = ViewModel()
+	@State var sound = Sound()
 	
 	init() {
 		Synth.shared.start()
@@ -17,11 +17,10 @@ struct MyApp: App {
 					
 					Spacer(minLength: geometry.size.height*0.04)
 					
-					ResultantWave()
+					ResultantWave(sound: $sound)
 					
-					Pages()
+					Pages(sound: $sound)
 				}
-				.environmentObject(viewModel)
 //				.preferredColorScheme(.dark)
 			}
 			
@@ -31,35 +30,31 @@ struct MyApp: App {
 
 struct Pages: View {
 	
-	@EnvironmentObject var viewModel: ViewModel
+	@Binding var sound: Sound
 	
 	var body: some View {
 		TabView {
-			Page1()
+			Page1(sound: $sound)
 				.onAppear {
 					Synth.shared.isPicker = false
-					viewModel.transitioning()
 				}
 				.onDisappear {
 					Synth.shared.isPicker = true
 				}
-			Page2()
+			Page2(sound: $sound)
 				.onDisappear {
 					Synth.shared.isPicker = false
 				}
 				.onAppear {
 					Synth.shared.isPicker = true
-					viewModel.transitioning()
 				}
-			Page3()
+			Page3(sound: $sound)
 				.onAppear {
 					Synth.shared.isPicker = true
-					viewModel.transitioning()
 				}
-			Page4()
+			Page4(sound: $sound)
 				.onAppear {
 					Synth.shared.isPicker = true
-					viewModel.transitioning()
 				}
 		}
 		.tabViewStyle(PageTabViewStyle())
@@ -68,22 +63,22 @@ struct Pages: View {
 
 struct ResultantWave: View {
 
-	@EnvironmentObject var viewModel: ViewModel
+	@Binding var sound: Sound
 
 	var body: some View {
 		VStack {
 			
 			ScrollView(.horizontal) {
-				let waveSum = ChordWave(container: viewModel.sound.waves)
+				let waveSum = ChordWave(container: sound.waves)
 				WaveView(wave: waveSum)
 					.frame(width: 4000)
 					.padding(.top)
-					.onChange(of: viewModel.sound.waves) { newValue in
+					.onChange(of: sound.waves) { newValue in
 						Synth.shared.setWaves(newValue)
 					}
 			}
 			
-			PlayButton(sound: $viewModel.sound)
+			PlayButton(sound: $sound)
 				.padding(.top)
 			
 		}

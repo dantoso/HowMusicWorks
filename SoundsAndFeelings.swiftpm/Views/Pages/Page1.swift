@@ -2,7 +2,7 @@ import SwiftUI
 
 struct Page1: View {
 	
-	@EnvironmentObject var viewModel: ViewModel
+	@Binding var sound: Sound
 	@State var showInfo = false
 	
 	var body: some View {
@@ -20,7 +20,7 @@ struct Page1: View {
 				Spacer()
 			}
 			
-			WaveInterfaceSliders(sound: $viewModel.sound)
+			WaveInterfaceSliders(sound: $sound)
 			
 		}
 		.sheet(isPresented: $showInfo, onDismiss: nil) {

@@ -2,7 +2,7 @@ import SwiftUI
 
 struct Page2: View {
 	
-	@EnvironmentObject var viewModel: ViewModel
+	@Binding var sound: Sound
 	@State var showInfo = false
 	
 	var body: some View {
@@ -20,7 +20,7 @@ struct Page2: View {
 				Spacer()
 			}
 			
-			WIPythNotePickers(sound: $viewModel.sound)
+			WIPythNotePickers(sound: $sound)
 			
 			Spacer()
 		}

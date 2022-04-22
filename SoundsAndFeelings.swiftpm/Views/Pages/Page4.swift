@@ -2,7 +2,7 @@ import SwiftUI
 
 struct Page4: View {
 	
-	@EnvironmentObject var viewModel: ViewModel
+	@Binding var sound: Sound
 	@State var showInfo = false
 	
 	var body: some View {
@@ -21,7 +21,7 @@ struct Page4: View {
 				Spacer()
 			}
 			
-			WIWideEqualTemp(sound: $viewModel.sound)
+			WIWideEqualTemp(sound: $sound)
 			
 			Spacer()
 		}
