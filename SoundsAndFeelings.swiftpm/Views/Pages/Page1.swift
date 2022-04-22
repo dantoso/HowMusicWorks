@@ -41,7 +41,7 @@ struct InfoView: View {
 			Text("\tHey there! Welcome to my playground! Here, I made 4 interfaces (separated by pages) that you can play with to hear and see how sound waves make us feel things!\n\tIn these interfaces you can control the frequency of 3 waves, they are added up to form a resultant wave that you can listen to by pressing play (you can scroll the resultant horizontaly to see more of it).")
 				.padding()
 			
-			Text("\tAlso, most of the info in all the pages are optional to experience this playground, in essence, this playground is just a sound frequency generator that works in real time, so just toying with it and paying attention to the sounds, the waves drawn and how you feel listening to each sound is more than enough.")
+			Text("\tAlso, most of the info in all the pages are optional to experience this playground, in essence, this playground is just a sound frequency generator that works in real time, the texts contain some explanation about what's in the page and experiment suggestions.")
 				.padding()
 			
 			HStack {
