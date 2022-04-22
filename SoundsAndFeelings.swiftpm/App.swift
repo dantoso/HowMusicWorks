@@ -42,14 +42,12 @@ struct Pages: View {
 					Synth.shared.isPicker = true
 				}
 			Page2(sound: $sound)
-				.onDisappear {
-					Synth.shared.isPicker = false
-				}
+			
+			Page3(sound: $sound)
 				.onAppear {
 					Synth.shared.isPicker = true
 				}
-			Page3(sound: $sound)
-				.onAppear {
+				.onDisappear {
 					Synth.shared.isPicker = true
 				}
 			Page4(sound: $sound)
