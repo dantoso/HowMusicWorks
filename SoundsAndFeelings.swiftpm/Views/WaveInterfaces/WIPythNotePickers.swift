@@ -23,7 +23,6 @@ struct WIPythNotePickers: View {
 			
 		}
 		.frame(alignment: .center)
-		.preferredColorScheme(.dark)
 	}
 }
 

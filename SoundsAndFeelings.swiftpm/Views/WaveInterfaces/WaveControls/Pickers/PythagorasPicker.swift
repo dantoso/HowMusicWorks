@@ -1,10 +1,10 @@
 import SwiftUI
 
-public struct PythagorasNotePicker: View {
+struct PythagorasNotePicker: View {
 	
 	@Binding var frequency: Double
 	
-	public var body: some View {
+	var body: some View {
 		VStack {
 			Button {
 				frequency = 0

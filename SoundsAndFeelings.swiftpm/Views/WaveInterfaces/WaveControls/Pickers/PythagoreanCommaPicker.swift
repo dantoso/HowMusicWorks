@@ -1,10 +1,10 @@
 import SwiftUI
 
-public struct PythagoreanCommaNotePicker: View {
+struct PythagoreanCommaNotePicker: View {
 	
 	@Binding var frequency: Double
 	
-	public var body: some View {
+	var body: some View {
 		VStack {
 			Button {
 				frequency = 0

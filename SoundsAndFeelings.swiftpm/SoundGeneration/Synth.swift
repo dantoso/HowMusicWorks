@@ -2,14 +2,14 @@
 import Foundation
 import AVFoundation
 
-final public class Synth {
+final class Synth {
 	
 	private static let singleton = Synth()
-	public static var shared: Synth { return singleton }
-	public let audioEngine: AVAudioEngine
+	static var shared: Synth { return singleton }
+	private let audioEngine: AVAudioEngine
 	
 	/// Container for the 3 waves that compose the sound that can be played.
-	public var waves = WaveContainer(waveA: false, waveB: false, waveC: false) {
+	private var waves = WaveContainer(waveA: false, waveB: false, waveC: false) {
 		didSet {
 			if oldValue.waveA.frequency != 0 {
 				deltaAHz = Float(waves.waveA.frequency - oldValue.waveA.frequency ) * 100
@@ -36,23 +36,23 @@ final public class Synth {
 	}
 	
 	// the delta difference to the last computed frequency for each wave.
-	var deltaAHz: Float = 0
-	var deltaBHz: Float = 0
-	var deltaCHz: Float = 0
+	private var deltaAHz: Float = 0
+	private var deltaBHz: Float = 0
+	private var deltaCHz: Float = 0
 	
 	// frequency in hertz for each wave
-	var aHz: Float {
+	private var aHz: Float {
 		Float(waves.waveA.frequency) * 100
 	}
-	var bHz: Float {
+	private var bHz: Float {
 		Float(waves.waveB.frequency) * 100
 	}
-	var cHz: Float {
+	private var cHz: Float {
 		Float(waves.waveC.frequency) * 100
 	}
 	
 	/// Volume of the Synth, goes from 0 to 1.
-	public var volume: Float {
+	var volume: Float {
 		get {
 			audioEngine.mainMixerNode.outputVolume
 		}
@@ -62,16 +62,16 @@ final public class Synth {
 	}
 	
 	// the time x for each wave (it makes sense in the source node closure)
-	var timeA: Float = 0
-	var timeB: Float = 0
-	var timeC: Float = 0
+	private var timeA: Float = 0
+	private var timeB: Float = 0
+	private var timeC: Float = 0
 	
 	/// Device sample rate. Sample rate is how many time frames there are in a second. Time frames are the moments at which audio values can be updated in audio buffers. Often the sample value is around 44 000, so the audio buffers are updated at around 44 000 a second.
 	let sampleRate: Double
 	
 	/// The from a time frame to the next (1/sampleRate)
 	let deltaTime: Float
-	public var isPicker = false
+	var isPicker = false
 	
 	/// The property responsible to comunicate with the device's audio buffers and deliver them their specific values for every frame of time.
 	lazy var sourceNode = AVAudioSourceNode { (_, _, frameCount, audioBufferList) -> OSStatus in
@@ -137,7 +137,7 @@ final public class Synth {
 	///   - period: period for the wave at its old frequency
 	///   - time: the time of reference to be used (timeA, timeB, timeC)
 	/// - Returns: Sample value
-	func sampleValForSine(oldFrequency: Float, ramp: Float, period: Float, time: Float) -> Float {
+	private func sampleValForSine(oldFrequency: Float, ramp: Float, period: Float, time: Float) -> Float {
 		
 		let currentTime = fmod(time, period)
 		
@@ -152,7 +152,7 @@ final public class Synth {
 		return sine
 	}
 	
-	func sampleValForTriangle(oldFrequency: Float, ramp: Float, period: Float, time: Float) -> Float {
+	private func sampleValForTriangle(oldFrequency: Float, ramp: Float, period: Float, time: Float) -> Float {
 		let currentTime = fmod(time, period)
 		let percent = currentTime/period
 		let frequency = oldFrequency + ramp * percent
@@ -172,7 +172,7 @@ final public class Synth {
 		
 	}
 	
-	init() {
+	private init() {
 		audioEngine = AVAudioEngine()
 		let mainMixer = audioEngine.mainMixerNode
 		let outputNode = audioEngine.outputNode
@@ -193,7 +193,7 @@ final public class Synth {
 	}
 	
 	/// Stops the engine
-	public func stop() {
+	func stop() {
 		audioEngine.stop()
 	}
 	
@@ -201,14 +201,14 @@ final public class Synth {
 		waves = WaveContainer(waveA: false, waveB: false, waveC: false)
 	}
 	
-	public func resetTime() {
+	func resetTime() {
 		timeA = 0
 		timeB = 0
 		timeC = 0
 	}
 	
 	/// Starts the engine (error throw is not handled so it might not work)
-	public func start() {
+	func start() {
 		do {
 			try audioEngine.start()
 		}
@@ -216,7 +216,7 @@ final public class Synth {
 	}
 	
 	/// Updates the value for the synth's wave container
-	public func setWaves(_ waves: WaveContainer) {
+	func setWaves(_ waves: WaveContainer) {
 		if isPicker {
 			resetTime()
 		}

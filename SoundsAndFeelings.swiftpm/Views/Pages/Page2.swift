@@ -14,6 +14,8 @@ struct Page2: View {
 					Image(systemName: "info.circle")
 						.font(Font.system(size: 24))
 				}
+				.padding(.leading)
+				
 				Text("Pythagorean tuning")
 					.font(.title)
 					.padding(.leading)

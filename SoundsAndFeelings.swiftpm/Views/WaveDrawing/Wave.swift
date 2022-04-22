@@ -1,7 +1,7 @@
 
 import SwiftUI
 
-public protocol Wave {
+protocol Wave {
 	var maxAmplitude: Double {get set}
 		
 	///Value Y of the function for an angle X
@@ -10,17 +10,17 @@ public protocol Wave {
 }
 
 
-public struct PureWave: Wave, Equatable {
+struct PureWave: Wave, Equatable {
 		
-	public var maxAmplitude: Double
-	public var frequency: Double
+	var maxAmplitude: Double
+	var frequency: Double
 	
-	public init(frequency: Double = PythagoreanTuning.first, maxAmplitude: Double = 25) {
+	init(frequency: Double = PythagoreanTuning.first, maxAmplitude: Double = 25) {
 		self.frequency = frequency
 		self.maxAmplitude = maxAmplitude
 	}
 	
-	public func intensity(forAngle angle: Double) -> Double {
+	func intensity(forAngle angle: Double) -> Double {
 		let sine = sin(angle*frequency)
 		let y = sine * maxAmplitude
 		
@@ -29,33 +29,33 @@ public struct PureWave: Wave, Equatable {
 	
 }
 
-public struct ChordWave: Wave {
+struct WaveSum: Wave {
 	
-	public var maxAmplitude: Double {
+	var maxAmplitude: Double {
 		get {
 			a.maxAmplitude + b.maxAmplitude + c.maxAmplitude
 		}
 		set{}
 	}
 	
-	public let a: PureWave
-	public let b: PureWave
-	public let c: PureWave
+	let a: PureWave
+	let b: PureWave
+	let c: PureWave
 
 	
-	public init(a: PureWave, b: PureWave, c: PureWave) {
+	init(a: PureWave, b: PureWave, c: PureWave) {
 		self.a = a
 		self.b = b
 		self.c = c
 	}
 	
-	public init(container: WaveContainer) {
+	init(container: WaveContainer) {
 		a = container.waveA
 		b = container.waveB
 		c = container.waveC
 	}
 	
-	public func intensity(forAngle angle: Double) -> Double {
+	func intensity(forAngle angle: Double) -> Double {
 		return a.intensity(forAngle: angle) + b.intensity(forAngle: angle) + c.intensity(forAngle: angle)
 	}
 	

@@ -1,8 +1,9 @@
 
 import SwiftUI
 
-public struct WaveView: View {
+struct WaveView: View {
 	
+	// custom shape that does the drawing
 	struct WavePath: Shape {
 		let wave: Wave
 		
@@ -27,15 +28,12 @@ public struct WaveView: View {
 		}
 	}
 	
-	public let wave: Wave
+	let wave: Wave
 	
-	public var body: some View {
+	var body: some View {
 		WavePath(wave: wave)
 			.stroke(lineWidth: 2)
 			.frame(height: wave.maxAmplitude*2)
 	}
-	
-	public init(wave: Wave) {
-		self.wave = wave
-	}
+
 }

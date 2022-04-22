@@ -4,10 +4,6 @@ public struct PlayButton: View {
 	
 	@Binding var sound: Sound
 	
-	public init(sound: Binding<Sound>) {
-		self._sound = sound
-	}
-	
 	public var body: some View {
 		
 		Button(sound.isPlaying ? "Stop" : "Play") {

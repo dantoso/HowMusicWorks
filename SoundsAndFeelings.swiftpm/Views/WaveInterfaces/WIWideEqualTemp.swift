@@ -1,10 +1,10 @@
 import SwiftUI
 
-public struct WIWideEqualTemp: View {
+struct WIWideEqualTemp: View {
 
 	@Binding var sound: Sound
 	
-	public var body: some View {
+	var body: some View {
 		VStack {
 			Group {
 				EqualTempWidePicker(frequency: $sound.waves.waveA.frequency)
@@ -18,7 +18,6 @@ public struct WIWideEqualTemp: View {
 			
 		}
 		.frame(alignment: .center)
-		.preferredColorScheme(.dark)
 	}
 }
 

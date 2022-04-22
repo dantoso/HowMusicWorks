@@ -23,7 +23,6 @@ struct WIEqualTempPickers: View {
 			
 		}
 		.frame(alignment: .center)
-		.preferredColorScheme(.dark)
 	}
 }
 

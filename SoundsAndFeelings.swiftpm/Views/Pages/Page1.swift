@@ -14,6 +14,8 @@ struct Page1: View {
 					Image(systemName: "info.circle")
 						.font(Font.system(size: 20))
 				}
+				.padding(.leading)
+				
 				Text("Sounds and feelings")
 					.font(.title)
 					.padding(.leading)

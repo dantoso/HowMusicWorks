@@ -21,7 +21,6 @@ struct WaveInterfaceSliders: View {
 				}
 		}
 		.frame(alignment: .center)
-		.preferredColorScheme(.dark)
 	}
 }
 
