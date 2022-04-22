@@ -38,7 +38,7 @@ struct InfoView: View {
 				.font(.headline)
 				.padding()
 			
-			Text("\tHey there, welcome to my playground! Here, I made 4 interfaces (separated by pages) that you can play with to hear and see how sound waves make us feel things!\n\tIn these interfaces you can control the frequency of 3 waves, they are added up to form a resultant wave that you can listen to by pressing play. The resultant and the other 3 waves have a visual representation drawn on the screen.")
+			Text("\tHey there, welcome to my playground! Here, I made 4 interfaces (separated by pages) that you can play with to hear and see how sound waves make us feel things!\n\tIn these interfaces you can control the frequency of 3 waves, they are added up to form a resultant wave that you can listen to by pressing play (you can scroll the resultant horizontaly to see more of it). The resultant and the other 3 waves have a visual representation drawn on the screen.")
 				.padding()
 			
 			Text("\tThe difference between each page lies in how you can control the pure waves. Here you use sliders, in the second you choose 12 pythagorean notes, on the third you choose 12 equal tempered notes, and on the last one you choose 28 equal tempered notes to try to play some music.")
