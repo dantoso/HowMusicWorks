@@ -58,7 +58,7 @@ struct InfoView2: View {
 			.padding()
 			
 			HStack {
-				Text("Some cool experiments:\n\n- Try to notice that when you play the first with another note near the octave, your ears kind of want that note to become the octave, and when you actually change it to an octave, you feel resolution.\n\n- The same as above happens with notes near the first, but this way the resolution happens when you change it to the first.\n\n- Play a first with a third and a fifth, then after listening to it change the third to a flat third and notice that the sound becomes sadder and darker, change it back to a third and it lights up again.\n\n- Notice that sadder, closed or discomforable sounds draw more complicated and hard to understand patterns, while comfortable and brighter sounds draw simpler and easier to read patterns on the waveform.")
+				Text("Some cool experiments:\n- Try to notice that when you play the first with another note near the octave, your ears kind of want that note to become the octave, and when you actually change it to an octave, you feel resolution.\n- The same as above happens with notes near the first, but this way the resolution happens when you change it to the first.\n- Play a first with a third and a fifth, then after listening to it change the third to a flat third and notice that the sound becomes sadder and darker, change it back to a third and it lights up again.\n- Notice that sadder, closed or discomforable sounds draw more complicated and hard to understand patterns, while comfortable and brighter sounds draw simpler and easier to read patterns on the waveform.")
 				Spacer()
 			}
 			.padding()
