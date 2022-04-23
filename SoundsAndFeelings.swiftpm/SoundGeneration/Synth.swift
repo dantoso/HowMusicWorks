@@ -100,23 +100,19 @@ final class Synth {
 			let bSample = self.sampleValForSine(oldFrequency: oldB, ramp: bRamp, period: bPeriod, time: self.timeB)
 			let cSample = self.sampleValForSine(oldFrequency: oldC, ramp: cRamp, period: cPeriod, time: self.timeC)
 			
-			// the if is here so they are never out of phase when using the picker
-			if !self.isPicker {
-				
-				// updates the time so it is a value from 0 to the wave's old period.
-				// this is to solve sound bugs that happen on sound change in real time
-				self.timeA = fmod(self.timeA, aPeriod)
-				self.timeB = fmod(self.timeB, bPeriod)
-				self.timeC = fmod(self.timeC, cPeriod)
-			}
-			
-			// get the total sample value by adding every sample value for each wave
-			let sampleTotalVal = aSample + bSample + cSample
-			
 			// progressing time for each wave
 			self.timeA += self.deltaTime
 			self.timeB += self.deltaTime
 			self.timeC += self.deltaTime
+			
+			// updates the time so it is a value from 0 to the wave's old period.
+			// this is to solve sound bugs that happen on sound change in real time
+			self.timeA = fmod(self.timeA, aPeriod)
+			self.timeB = fmod(self.timeB, bPeriod)
+			self.timeC = fmod(self.timeC, cPeriod)
+			
+			// get the total sample value by adding every sample value for each wave
+			let sampleTotalVal = aSample + bSample + cSample
 			
 			// for every available audio buffer...
 			for buffer in ablPointer {
