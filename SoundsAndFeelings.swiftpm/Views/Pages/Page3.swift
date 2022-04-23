@@ -39,7 +39,7 @@ struct Page3: View {
 struct InfoView3: View {
 	var body: some View {
 		VStack {
-			Text("Equal temperament")
+			Text("A bit of history and extra information")
 				.font(.headline)
 				.padding()
 			

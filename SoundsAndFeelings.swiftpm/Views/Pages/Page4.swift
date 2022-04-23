@@ -52,7 +52,7 @@ struct InfoView4: View {
 				.padding(.top)
 				.font(.headline)
 			
-			Text("\tThey represent notes in western music notation, there are 7 different notes represented by alphabet letters (A to G) and we differentiate how high or low they are by numbers after those letters. For example A4 is the octave of A3, F#5 is the octave of F#4.\n\tThere are also sharp notes, they are noted by the # after the letter, so there is an A and an A sharp (A#). Sharp notes are notes a little bit higher pitched than their natural counterparts, so A (A natural) is a bit lower than A# (A sharp). Not all the notes have a sharper \"version\", actually only B and E don't have sharper \"versions\".")
+			Text("\n\tThey represent notes in western music notation, there are 7 different notes represented by alphabet letters (A to G) and we differentiate how high or low they are by numbers after those letters. For example A4 is the octave of A3, F#5 is the octave of F#4.\n\tThere are also sharp notes, they are noted by the # after the letter, so there is an A and an A sharp (A#). Sharp notes are notes a little bit higher pitched than their natural counterparts, so A (A natural) is a bit lower than A# (A sharp). Not all the notes have a sharper \"version\", actually only B and E don't have sharper \"versions\".")
 				.padding([.bottom, .leading, .trailing])
 			
 			Text("\tAnd that's it, it makes me very happy that you got here, hope you had the same fun playing and discovering about sound as I had creating this (I had a lot of fun).")

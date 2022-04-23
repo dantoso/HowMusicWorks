@@ -44,11 +44,8 @@ struct InfoView2: View {
 			Text("\tSo, a long time ago, it is said that Pythagoras figured tuning out. He derived the notes by multiplying a base/original frequency, (called the first in western music theory) by a specific ratio.")
 				.padding()
 
-			Text("\tFor example, the ratio of an octave (a fancy name for the last note in the scale) is 2/1, so you multiply the first (in this example 440 Hz) by 2/1, and you get 880 Hz, which means 880 Hz is the octave of 440 Hz.")
-				.padding()
-			
 			HStack {
-				Text("\tPythagoras' system is thought around \"comfortable\" sounding intervals and \"uncomfortable\" sounding intervals.\n\tComfortable sounding notes (when played with non-flat notes): first, octave, fifth, third, flat third.\n\tUncomfortable sounding notes (when played with non-flat notes): flat fifth, flat sixth, flat second, seventh.")
+				Text("\tPythagoras' system is thought around \"comfortable\" sounding intervals and \"uncomfortable\" sounding intervals.\n\n\tComfortable sounding notes (when played with non-flat notes): first, octave, fifth, third, flat third.\n\tUncomfortable sounding notes (when played with non-flat notes): flat fifth, flat sixth, flat second, seventh.")
 				Spacer()
 			}
 			.padding()
@@ -57,7 +54,7 @@ struct InfoView2: View {
 				.padding()
 			
 			HStack {
-				Text("Some cool experiments:\n- Try to notice that when you play the first with another note near the octave, your ears kind of want that note to become the octave, and when you actually change it to an octave, you feel resolution.\n- The same as above happens with notes near the first, but this way the resolution happens when you change it to the first.\n- Play a first with a third and a fifth, then after listening to it change the third to a flat third and notice that the sound becomes sadder and darker, change it back to a third and it lights up again.\n- Notice that sadder, closed or discomforable sounds draw more complicated and hard to understand patterns, while comfortable and brighter sounds draw simpler and easier to read patterns on the waveform.")
+				Text("Some cool experiments:\n\n- Play a first with a third and a fifth, then after listening to it change the third to a flat third and notice that the sound becomes sadder and darker, change it back to a third and it lights up again.\n\n- Notice that sadder, closed or discomforable sounds draw more complicated and hard to understand patterns, while comfortable and brighter sounds draw simpler and shorter patterns on the waveform.")
 				Spacer()
 			}
 			.padding()
