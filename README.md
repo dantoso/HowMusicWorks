@@ -18,6 +18,7 @@ Here's a little of onboarding on the code I've written.
 
 I've separated the app's core logic in 3 parts: wave abstraction, wave drawing and sound generation. Let's start from the beggining.
 
+
 ### Wave abstraction
 
 So, to show and play waves, I needed first to find a way to compute and process them. So I created a protocol called Wave, that represented the important information I needed about a general wave (a pure wave or a resultant of the sum of 3 pure waves)
@@ -40,7 +41,19 @@ Now that I had a way to represent the waves, I had to draw them.
 
 Alright, so to draw and show the drawings on the screen I made a SwiftUI view that displays in its body a custom shape, called WavePath:
 
-<img width="992" alt="Captura de Tela 2022-04-29 às 17 47 36" src="https://user-images.githubusercontent.com/80010223/166067118-66685ddb-9cb5-439b-ad03-2e2f5b54e8b6.png">
+<img width="733" alt="Captura de Tela 2022-04-29 às 17 56 49" src="https://user-images.githubusercontent.com/80010223/166068121-cac481a1-2207-4974-b722-826e704714b0.png">
 
-Now, what about the sound
+So now that I had a way to draw any kind of wave I wanted on the screen, I needed to play them
 
+
+### Sound generation
+
+This was definetively the hardest thing I had to code in this project. First there wasn't a lot of documentation about how to generate pure frequency sounds programmaticaly in swift, I had to dig a lot to find something, and I did! This is the amazing [medium post](https://betterprogramming.pub/building-a-synthesizer-in-swift-866cd15b731) explaining how to use the ***AVSourceNode***, which is the property of the Synth class that does all the sound generation magic, you can see that my code is completely based on what Grant explains there.
+
+However, the approach he made in the medium post did not allow me to change the sound in real time, there were some severe bugs to the sound playing when I edited the sound wave frequency while listening to it. To fix that, I dug a little deeper and saw that he had a [github repository](https://github.com/GrantJEmerson/SwiftSynth) with updated code! And guess what? He made it in a way that the sound could be edited in real time without deafening the user! 
+
+After studying his code I made the corrections in my own code and also adapted it to not only play a single frequency (as his project), but 3 frequencies at the same time!
+
+It was an amazing experience and I could not feel more rewarded when I pressed play... and it simply played the sound I was telling it to play.
+
+So that's it, hope you enjoy playing with my project as much as I enjoyed making it!
