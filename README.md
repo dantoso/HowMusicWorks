@@ -16,7 +16,7 @@ It's really cool to toy with it, I promise.
 
 Here's a little of onboarding on the code I've written. 
 
-I've separated the app's core logic in 4 parts: wave abstraction, wave drawing, wave controls and sound generation. Let's start from the beggining.
+I've separated the app's core logic in 3 parts: wave abstraction, wave drawing and sound generation. Let's start from the beggining.
 
 ### Wave abstraction
 
@@ -33,4 +33,14 @@ PureWave:
 And a WaveSum:
 
 <img width="992" alt="Captura de Tela 2022-04-29 às 17 43 42" src="https://user-images.githubusercontent.com/80010223/166066683-db36a025-7c0a-4047-a44d-1fd48cc20100.png">
+
+Now that I had a way to represent the waves, I had to draw them.
+
+### Wave drawing
+
+Alright, so to draw and show the drawings on the screen I made a SwiftUI view that displays in its body a custom shape, called WavePath:
+
+<img width="992" alt="Captura de Tela 2022-04-29 às 17 47 36" src="https://user-images.githubusercontent.com/80010223/166067118-66685ddb-9cb5-439b-ad03-2e2f5b54e8b6.png">
+
+Now, what about the sound
 
