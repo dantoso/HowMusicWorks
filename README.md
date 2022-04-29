@@ -56,4 +56,9 @@ After studying his code I made the corrections in my own code and also adapted i
 
 It was an amazing experience and I could not feel more rewarded when I pressed play... and it simply played the sound I was telling it to play.
 
+
+## Ending
+
+Of course that isn't near all that I went through to make this work, there were a lot of much harder to solve bugs and I had to break and rebuild my head multiple times to get to a UI that felt good, satisfied me and didn't break my Synth, wave drawing or any other feature.
+
 So that's it, hope you enjoy playing with my project as much as I enjoyed making it!
