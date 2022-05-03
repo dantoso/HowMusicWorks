@@ -55,7 +55,7 @@ struct Pages: View {
 					Synth.shared.isPicker = true
 				}
 		}
-		.tabViewStyle(PageTabViewStyle())
+		.tabViewStyle(.page(indexDisplayMode: .always))
 	}
 }
 
