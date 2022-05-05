@@ -1,5 +1,7 @@
 # Sounds and feelings
 
+![Captura de Tela 2022-05-05 às 16 28 49](https://user-images.githubusercontent.com/80010223/167024096-43cac204-a350-43ef-a5c7-34ce6c1be214.png)
+
 Hey there! This is the project I've submmited to WWDC 2022, it's a very short app, but it was a very big challenge for me to make it and I'm very proud of it.
 
 The goal of my app is to show you how music works in a fundamental level, how sound waves make us feel things
