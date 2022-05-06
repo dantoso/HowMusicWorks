@@ -8,22 +8,16 @@ struct Page1: View {
 	var body: some View {
 		VStack {
 			HStack {
-				Button {
-					showInfo = true
-				} label: {
-					Image(systemName: "info.circle")
-						.font(Font.system(size: 20))
-				}
-				.padding(.leading)
+				InfoBtn(showInfo: $showInfo)
 				
-				Text("Sounds and feelings")
-					.font(.title)
-					.padding(.leading)
+				PageTitle(title: "Sounds and Feelings")
+				
 				Spacer()
 			}
 			
 			WaveInterfaceSliders(sound: $sound)
 			
+			Spacer()
 		}
 		.sheet(isPresented: $showInfo, onDismiss: nil) {
 			InfoView()

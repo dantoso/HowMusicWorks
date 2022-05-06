@@ -21,7 +21,7 @@ struct MyApp: App {
 					
 					Pages(sound: $sound)
 				}
-//				.preferredColorScheme(.dark)
+				.preferredColorScheme(.dark)
 			}
 			
         }
@@ -55,7 +55,7 @@ struct Pages: View {
 					Synth.shared.isPicker = true
 				}
 		}
-		.tabViewStyle(PageTabViewStyle())
+		.tabViewStyle(.page(indexDisplayMode: .always))
 	}
 }
 
