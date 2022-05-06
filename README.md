@@ -1,7 +1,6 @@
 # Sounds and feelings!
-![scrnsht](https://user-images.githubusercontent.com/80010223/167191451-71450bab-235c-4b50-8660-694777840e44.png)
 
-<img width="597" alt="scrnsht" src=https://user-images.githubusercontent.com/80010223/167191451-71450bab-235c-4b50-8660-694777840e44.png>
+<img width="500" alt="scrnsht" src=https://user-images.githubusercontent.com/80010223/167191451-71450bab-235c-4b50-8660-694777840e44.png>
 
 Hey there! This is the project I've submmited to WWDC 2022, it's a very short app, but it was a very big challenge for me to make it and I'm very proud of it.
 
