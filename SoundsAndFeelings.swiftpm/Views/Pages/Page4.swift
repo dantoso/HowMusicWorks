@@ -9,17 +9,10 @@ struct Page4: View {
 		
 		VStack {
 			HStack {
-				Button {
-					showInfo = true
-				} label: {
-					Image(systemName: "info.circle")
-						.font(Font.system(size: 24))
-				}
-				.padding(.leading)
+				InfoBtn(showInfo: $showInfo)
 				
-				Text("Play around!")
-					.font(.title)
-					.padding(.leading)
+				PageTitle(title: "Play around!")
+				
 				Spacer()
 			}
 			

@@ -8,17 +8,10 @@ struct Page2: View {
 	var body: some View {
 		VStack {
 			HStack {
-				Button {
-					showInfo = true
-				} label: {
-					Image(systemName: "info.circle")
-						.font(Font.system(size: 24))
-				}
-				.padding(.leading)
+				InfoBtn(showInfo: $showInfo)
 				
-				Text("Pythagorean tuning")
-					.font(.title)
-					.padding(.leading)
+				PageTitle(title: "Pythagorean tuning")
+				
 				Spacer()
 			}
 			

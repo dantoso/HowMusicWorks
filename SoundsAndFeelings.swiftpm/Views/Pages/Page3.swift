@@ -1,6 +1,5 @@
 import SwiftUI
 
-
 struct Page3: View {
 	
 	@Binding var sound: Sound
@@ -10,17 +9,10 @@ struct Page3: View {
 		
 		VStack {
 			HStack {
-				Button {
-					showInfo = true
-				} label: {
-					Image(systemName: "info.circle")
-						.font(Font.system(size: 24))
-				}
-				.padding(.leading)
+				InfoBtn(showInfo: $showInfo)
 				
-				Text("Equal temperament")
-					.font(.title)
-					.padding(.leading)
+				PageTitle(title: "Equal temperament")
+				
 				Spacer()
 			}
 			

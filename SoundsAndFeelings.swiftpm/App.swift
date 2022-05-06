@@ -21,7 +21,7 @@ struct MyApp: App {
 					
 					Pages(sound: $sound)
 				}
-//				.preferredColorScheme(.dark)
+				.preferredColorScheme(.dark)
 			}
 			
         }
