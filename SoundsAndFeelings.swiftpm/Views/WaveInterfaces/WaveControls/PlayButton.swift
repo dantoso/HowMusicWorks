@@ -1,10 +1,10 @@
 import SwiftUI
 
-public struct PlayButton: View {
+struct PlayButton: View {
 	
 	@Binding var sound: Sound
 	
-	public var body: some View {
+	var body: some View {
 		
 		Button(sound.isPlaying ? "Stop" : "Play") {
 			sound.isPlaying.toggle()
