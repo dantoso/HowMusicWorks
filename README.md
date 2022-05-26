@@ -12,7 +12,7 @@ It was made for iPad, so please run it in one or a simulator to have a nice expe
 
 You can either: 
 1. Run it in the simulator in XCode, the simulalator can be very slow and the animations might not be so fluid.
-2. Deploy it on an iOS or iPadOS device, using the simulator is way better if you're not deploying on an iPad. When you deploy it, the sound might not be working properly at first, so try to open pause and play the sound again or change the page.
+2. Deploy it on an iOS or iPadOS device, using the simulator is way better if you're not deploying on an iPad. When you deploy it, the sound might not be working properly at first, so try to reopen it or pause and play the sound again.
 3. Open this code in the Swift Playgrounds App (this is obviously the preferred option).
 
 To use the Swift Playgrounds App
