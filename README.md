@@ -76,6 +76,6 @@ It was an amazing experience and I could not feel more rewarded when I pressed p
 
 ## Ending
 
-Of course that isn't near all that I went through to make this work, there were a lot of much harder to solve bugs and I had to break and rebuild my head multiple times to get to a UI that felt good, satisfied me and didn't break my Synth, wave drawing or any other feature.
+Of course this isn't near all that I went through to make this work. There were a lot of much harder to solve bugs and I had to break and rebuild my head multiple times to get to a UI that satisfied me, felt good and didn't break my Synth, wave drawing or any other features.
 
-So that's it, hope you enjoy playing with my project as much as I enjoyed making it!
+So that's it, hope you enjoy playing with my project as much as I enjoyed making it (I REALLY did)!
