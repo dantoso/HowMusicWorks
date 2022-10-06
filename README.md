@@ -4,7 +4,7 @@
 
 Hey there! This is the project I've submmited to WWDC 2022 and got **approved** (hehe), it's a very short app, but it was a very big challenge for me to make it and I'm very proud of it.
 
-The goal of my app is to show you how music works in a fundamental level, how sound waves make us feel things
+The goal of my app is to show you how music works in a fundamental level, **how sound waves make us feel things.**
 
 ## How to run it?
 
