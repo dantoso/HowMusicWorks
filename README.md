@@ -1,10 +1,25 @@
-# Sounds and feelings!
+# Sounds and feelings! [Approved]
 
 <img width="500" alt="scrnsht" src=https://user-images.githubusercontent.com/80010223/167191451-71450bab-235c-4b50-8660-694777840e44.png>
 
-Hey there! This is the project I've submmited to WWDC 2022, it's a very short app, but it was a very big challenge for me to make it and I'm very proud of it.
+Hey there! This is the project I've submmited to WWDC 2022 and got **approved** (hehe), it's a very short app, but it was a very big challenge for me to make it and I'm very proud of it.
 
-The goal of my app is to show you how music works in a fundamental level, how sound waves make us feel things
+The goal of my app is to show you how music works in a fundamental level, **how sound waves make us feel things.**
+
+## How to run it?
+
+It was made for iPad, so please run it in one or a simulator to have a nice experience.
+
+You can either: 
+1. Run it in the simulator in XCode, the simulalator can be very slow and the animations might not be so fluid.
+2. Deploy it on an iOS or iPadOS device, using the simulator is way better if you're not deploying on an iPad. When you deploy it, the sound might not be working properly at first, so try to reopen it or pause and play the sound again.
+3. Open this code in the Swift Playgrounds App (this is obviously the preferred option).
+
+To use the Swift Playgrounds App
+1. You can simply download the [Swift Playgrounds App](https://apps.apple.com/app/swift-playgrounds/id908519492) for free in the iPad App Store
+2. Download my code here
+3. And open it in the Swift Playgrounds App.
+
 
 ## What exactly is it?
 
@@ -61,6 +76,6 @@ It was an amazing experience and I could not feel more rewarded when I pressed p
 
 ## Ending
 
-Of course that isn't near all that I went through to make this work, there were a lot of much harder to solve bugs and I had to break and rebuild my head multiple times to get to a UI that felt good, satisfied me and didn't break my Synth, wave drawing or any other feature.
+Of course this isn't near all that I went through to make this work. There were a lot of much harder to solve bugs and I had to break and rebuild my head multiple times to get to a UI that satisfied me, felt good and didn't break my Synth, wave drawing or any other features.
 
-So that's it, hope you enjoy playing with my project as much as I enjoyed making it!
+So that's it, hope you enjoy playing with my project as much as I enjoyed making it (I REALLY did)!
