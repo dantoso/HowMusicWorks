@@ -10,7 +10,13 @@ The goal of my app is to show you how music works in a fundamental level, **how 
 
 It was made for iPad, so please run it in one or a simulator to have a nice experience.
 
-You can either: 
+Well, good news! I updated the repository so it has an app version of my project rather than a playground version, which means that by having the code in the main branch you will just need to run my project as you would with any other app in xcode!
+
+### Playgrounds version
+
+You can also use the playgrounds version if you like, it's in the playground branch!
+
+If you want to run it in a playground here are the options I know work: 
 1. Run it in the simulator in XCode, the simulalator can be very slow and the animations might not be so fluid.
 2. Deploy it on an iOS or iPadOS device, using the simulator is way better if you're not deploying on an iPad. When you deploy it, the sound might not be working properly at first, so try to reopen it or pause and play the sound again.
 3. Open this code in the Swift Playgrounds App (this is obviously the preferred option).
